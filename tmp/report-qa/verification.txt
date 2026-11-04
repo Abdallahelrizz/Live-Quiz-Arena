@@ -1,0 +1,6 @@
+2026-11-05 Fat-Rat v7 final revision
+16 pages; 32 unique message types; 2 native editable OMML equations with 3 stacked fractions; 2 monochrome sequence diagrams; 6 completed Claude reviews with dispositions.
+All final Word XML text colors are black, table fills white and borders black. Rendered pages inspected; unchanged pages matched previously inspected PNGs exactly after the final cross-reference correction.
+All agreed limits, theme, saved-host ownership, CLOSE_ROOM, lost-reply recovery and scoring are documented. Application implementation, capacity/LAN tests and Wireshark captures remain future work.
+Final render: complete-black-verified/
+SHA256 9deaa3ed73e838e94223a37a2abbcfe1bb2fb04846e91dc4b9fecabf804d4262
