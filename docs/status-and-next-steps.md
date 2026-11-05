@@ -1,8 +1,23 @@
 # Fat-Rat status and remaining work
 
-Updated: 2026-11-05 by Codex.
+Updated: 2026-11-05 by Claude Code.
 
-**The written design for sections 1 and 2 is complete with the agreed changes. Application implementation and application testing have not started.** “Report complete” means the design is documented; it does not mean the game works or that the project is finished. The instructor's request to prove working behavior is still outstanding.
+**The written design for sections 1 and 2 is complete with the agreed changes.** On 2026-11-05 the instructor asked for a test. The section 2 protocol was then built and tested, on one Mac only; see the next section. The quiz game itself (real server, clients, interface) has not been built. "Report complete" means the design is documented; it does not mean the game works or that the project is finished.
+
+## Protocol test (built 2026-11-05)
+
+Details, commands and the full check list are in [protocol-test.md](protocol-test.md).
+
+- [x] Built the protocol layer in `fatrat/protocol/` (framing, catalogue, validation, UDP filter), meant to be reused by the real server and clients.
+- [x] 57 automated tests pass, including a check that the Word report's message and error tables match the code.
+- [x] Protocol check passes on this Mac: 36/36 with one player, 151/151 with five at once. It covers framing, invalid messages, UDP loss, duplication and reordering, answers, and fatal input.
+- [x] Rooms check passes on this Mac: 40/40. It covers the largest quiz, the 50-player maximum, the 51st player rejected, the last-slot race, the start gate, and three rooms at once with 5 players each.
+- [x] Planted bugs (7 in the protocol code, 4 in the test server) were all caught by the tests.
+- [ ] Run the protocol and rooms checks with the client on a **second device**.
+- [ ] Capture the TCP and UDP traffic in Wireshark; screenshots are listed in protocol-test.md. Deferred to Section 4 (Abdallah, 2026-11-05). Install with `brew install --cask wireshark-app`.
+- [ ] Decide with the instructor whether these results go in the report now or in Section 4.
+
+These checks ran against `protocol_check/server.py`, a test server. They show that the protocol works. They are not results for the future game server, so the application tests below stay unchecked until that server exists.
 
 ## Completed design and document checks
 
@@ -24,7 +39,7 @@ The current artifact is [the sections 1 and 2 report](../output/docx/CSC430_Fat_
 - [ ] Add meaningful automated tests and test clients for the implemented behavior.
 - [ ] Document installation, dependencies, server/client commands, LAN setup and important code in the README/source.
 
-## Application tests still required — none run yet
+## Application tests still required (none run on the real server yet)
 
 - [ ] Exercise full gameplay: joins, answers, scoring, grouped ties, final rankings and host advancement.
 - [ ] Check boundaries: 4 versus 5 connected players at start; the 50-player cap including disconnected ACTIVE players; 51st-player rejection; concurrent joins at 49; resume at capacity; leave/removal freeing a slot while preserving history.
@@ -49,4 +64,4 @@ The detailed scenarios are also in the protocol's later-verification section. Th
 - [ ] Write Section 5 Challenges and Limitations from actual implementation/testing experience.
 - [ ] Update Section 6 References and AI assistance disclosure as the full project develops; references already accompany the sections 1 and 2 report.
 
-The next implementation step is to build the framing/message-validation layer and a minimal server/host/player room flow, then test that working slice before adding the remaining controls and visuals. No additional gameplay-policy choice currently blocks implementation.
+The framing and message-validation layer now exists in `fatrat/protocol/`. The test server's `protocol_check/rooms.py` shows a minimal host/player room flow. The next implementation step is the real server, host and player clients built on that layer, then the remaining controls and visuals. No additional gameplay-policy choice currently blocks implementation.
