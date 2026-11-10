@@ -104,7 +104,7 @@ doc.styles['Caption'].font.color.rgb = RGBColor(0, 0, 0)
 doc.styles['Caption'].paragraph_format.space_after = Pt(8)
 doc.core_properties.title = 'Fat-Rat Technical Report Sections 1 and 2'
 doc.core_properties.subject = 'CSC430 application description and application layer protocol'
-doc.core_properties.author = 'CSC430 Project Team'
+doc.core_properties.author = 'Abdallah Elrizz; Rayan Madi; Tala Daouk'
 doc.core_properties.keywords = 'CSC430 TCP UDP quiz protocol'
 footer = sec.footer.paragraphs[0]
 footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -256,11 +256,31 @@ def figure(path, width, height, cap):
     caption(cap)
 
 
-doc.add_paragraph('Fat-Rat Technical Report', style='Title')
-doc.add_paragraph('Application Description and Application Layer Protocol', style='Subtitle')
-p('Lebanese American University | CSC430 Computer Networks | Fall 2026')
-p('5 November 2026')
-p('This report specifies the planned behavior and communication protocol of Fat-Rat, a multiplayer quiz application using direct Python TCP and UDP sockets. It covers technical report sections 1 and 2. Implementation and experimental evidence will be documented in the later project sections.')
+# Formal opening page; the supplied institutional logo is preserved unchanged.
+cover_logo = doc.add_paragraph()
+cover_logo.alignment = WD_ALIGN_PARAGRAPH.CENTER
+cover_logo.paragraph_format.space_after = Pt(24)
+cover_logo.add_run().add_picture(str(ROOT / 'docs/assets/lau-school-of-arts-and-sciences.png'), width=Inches(6.6))
+for text, style in [
+    ('Fat-Rat Technical Report', 'Title'),
+    ('Application Description and Application Layer Protocol', 'Subtitle')
+]:
+    para = doc.add_paragraph(text, style=style)
+    para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+for text in ['Lebanese American University', 'School of Arts and Sciences', 'CSC430 Computer Networks', 'Fall 2026']:
+    p(text).alignment = WD_ALIGN_PARAGRAPH.CENTER
+para = p('Prepared by', bold=True)
+para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+para.paragraph_format.space_before = Pt(20)
+for name, student_id in [('Abdallah Elrizz', '202301345'), ('Rayan Madi', '202401943'), ('Tala Daouk', '202304053')]:
+    p(name + '  |  ' + student_id).alignment = WD_ALIGN_PARAGRAPH.CENTER
+para = p('5 November 2026')
+para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+para.paragraph_format.space_before = Pt(18)
+para = p('This report describes Fat-Rat and its application-layer protocol using direct Python TCP and UDP sockets. It covers sections 1 and 2, including initial validation of the implemented protocol layer with a dedicated test server. The full quiz game and its end-to-end evaluation remain later project work.')
+para.paragraph_format.space_before = Pt(22)
+sec.different_first_page_header_footer = True
+doc.add_page_break()
 
 h('1 Application Description', 1)
 h('1.1 Purpose and participants')
@@ -452,6 +472,16 @@ fig2 = sequence('editing-sequence', ['Host client', 'Server', 'Player client'], 
 ])
 figure(*fig2, 'Figure 2  Current-question restart and reconnect recovery. The host explicitly resumes; the player reconciles STATE before another action.')
 doc.add_page_break()
+h('2.13 Protocol validation')
+p('On 5 November 2026, the framing, message catalogue and validation, and UDP snapshot filter were implemented as a reusable Python protocol layer. A dedicated test server and simulated clients exercised selected protocol and room scenarios while the full quiz game remained unimplemented. The results below were rerun on one Mac using Python 3.9.6 over loopback IPv4 (127.0.0.1), with non-default TCP port 43100 and UDP port 43101 (the configurable example ports in section 2.1 are 43000/43001). No client on another physical device participated. The test peer used 0.5-second UDP snapshots to generate impairment samples; the game design specifies about one per second.')
+table(['Validation run', 'Result', 'Coverage'], [
+    ('Automated unit tests', '57 / 57 passed', 'Framing, strict JSON, message/quiz validation, UDP filtering and report-to-code catalogue consistency.'),
+    ('Single-client protocol check', '36 / 36 passed', 'Partial/coalesced frames, malformed input, UDP impairments, answers, 10 s stalled-frame timeout and isolation of bad clients.'),
+    ('Five concurrent protocol clients', '151 / 151 passed', 'The protocol checks repeated concurrently, plus shared fatal-input checks; the slow timeout case was skipped in this run.'),
+    ('Room-limit and concurrency checks', '40 / 40 passed', '30 questions with eight choices each at the text-length limits; five-player start gate; 50-player admission cap, 51st rejection, last-slot race and three rooms.')
+], [2.05, 1.12, 3.73], size=10)
+p('The three network runs produced 227 passing assertions in total; this includes repeated checks, rather than 227 distinct scenarios. The three-room run used separate hosts and five simulated players per room, with independent timers and scores. A report-consistency test verifies message names, directions, transports and error-code names against the code catalogue; it does not prove every state transition correct. Reproducible commands and raw outputs accompany the project under docs/protocol-test.md and docs/test-results/2026-11-05-codex/.')
+p('These results validate the covered protocol/test-server scenarios on one computer. They do not establish full game correctness or performance across real devices. Pause/resume, editing, removal, token-based reconnect, explicit CLOSE_ROOM and its recovery, heartbeat, rate limiting, UDP-silence GET_STATE recovery and session replacement remain unvalidated end to end; unit tests cover their message formats, while these behaviors are not implemented in the test peer. The second-device LAN run, Wireshark captures and full-game functional/capacity testing remain outstanding and are deferred to Section 4. No packet captures or unperformed results are claimed here.')
 h('References')
 for text in [
     '[1] Lebanese American University. CSC430 Computer Networks, Fall 2026. Course Project: Live Quiz Arena Socket Programming. Project Requirements.pdf, supplied course specification.',
@@ -459,7 +489,7 @@ for text in [
     '[3] Eggert, L., Fairhurst, G., and Shepherd, G. RFC 8085: UDP Usage Guidelines. IETF, March 2017, sections 3.2 and 3.3. https://www.rfc-editor.org/rfc/rfc8085.html',
     '[4] Python Software Foundation. Socket Programming HOWTO. https://docs.python.org/3/howto/sockets.html',
     '[5] Python Software Foundation. time.monotonic and time.monotonic_ns. https://docs.python.org/3/library/time.html#time.monotonic',
-    'AI assistance: OpenAI Codex and Anthropic Claude were used for protocol drafting, critical review and document preparation. The behavior described is a design specification; no implementation, load-test or Wireshark result is claimed in these sections.'
+    'AI assistance: OpenAI Codex and Anthropic Claude supported protocol drafting, critical review, test development and document preparation. Protocol validation is limited to the scenarios reported in section 2.13.'
 ]:
     p(text)
 

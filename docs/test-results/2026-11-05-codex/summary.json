@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-05",
+  "reviewer": "Codex",
+  "python": "3.9.6",
+  "host_platform": "Darwin",
+  "topology": "server and simulated clients on one Mac, loopback IPv4",
+  "server_ipv4": "127.0.0.1",
+  "tcp_port": 43100,
+  "udp_port": 43101,
+  "unit_tests": {
+    "passed": 57,
+    "total": 57
+  },
+  "network_runs": [
+    {
+      "name": "one-client protocol",
+      "passed": 36,
+      "total": 36
+    },
+    {
+      "name": "five-client protocol; skip slow timeout",
+      "passed": 151,
+      "total": 151
+    },
+    {
+      "name": "room-limit and concurrency",
+      "passed": 40,
+      "total": 40
+    }
+  ],
+  "network_assertions_total": 227,
+  "second_device": false,
+  "wireshark": false,
+  "full_game_implemented": false,
+  "report_sha256": "56b1a1553d5759c860c19d52d9e934481cf46fa5a39769ec2f2c80a734dc3536",
+  "final_report_consistency_tests": {
+    "passed": 3,
+    "total": 3
+  }
+}

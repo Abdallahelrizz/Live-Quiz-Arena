@@ -1,0 +1,26 @@
+Fat-Rat protocol check client
+
+Running 5 players at the same time (each runs every T/V/U/A check)...
+  player 1: 29/29 checks passed
+  player 2: 29/29 checks passed
+  player 3: 29/29 checks passed
+  player 4: 29/29 checks passed
+  player 5: 29/29 checks passed
+
+Fatal input   (only that connection is closed; the server keeps running)
+  PASS  F1   invalid JSON -> ERROR INVALID_MESSAGE (reply_to null), then closed
+              ERROR INVALID_MESSAGE (reply_to null), closed
+  PASS  F2   duplicate JSON key -> ERROR INVALID_MESSAGE, then closed
+              ERROR INVALID_MESSAGE (reply_to null), closed
+  PASS  F3   protocol version 2 -> ERROR UNSUPPORTED_VERSION (reply_to matches), then closed
+              ERROR UNSUPPORTED_VERSION (reply_to matches), closed
+  PASS  F4   frame length 0 -> closed without a reply
+              closed after 0.00 s
+  PASS  F5   frame length 2,000,000 (> 1 MiB) -> closed at once, body never read
+              closed after 0.00 s
+
+  (F6 stalled-frame check skipped with --skip-slow)
+  PASS  F7   server still accepts and serves a new client after all of the above
+              RESULT
+
+151/151 checks passed - protocol check PASSED

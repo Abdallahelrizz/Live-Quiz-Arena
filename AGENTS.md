@@ -1,6 +1,6 @@
 # Fat-Rat: project memory for AI agents
 
-**Last updated: 2026-11-05 15:41 EET (UTC+2) by Claude Code**
+**Last updated: 2026-11-05 by Codex**
 
 `AGENTS.md` (read by Codex) and `CLAUDE.md` (read by Claude Code) are identical copies. When you change one, copy it over the other and update the timestamp line in both. Check with `cmp AGENTS.md CLAUDE.md`.
 
@@ -12,7 +12,7 @@
 
 ## The project
 
-CSC430 Computer Networks, LAU, Fall 2026. Team of three: Abdallah and two teammates, whose names are not recorded yet. **Fat-Rat** is a multiplayer, Kahoot-style quiz in Python using raw `socket` TCP and UDP plus `threading`. No frameworks. Requirements: `source_documents/Project Requirements.pdf`.
+CSC430 Computer Networks, LAU, Fall 2026. Team: Abdallah Elrizz (202301345), Rayan Madi (202401943), Tala Daouk (202304053). **Fat-Rat** is a multiplayer, Kahoot-style quiz in Python using raw `socket` TCP and UDP plus `threading`. No frameworks. Requirements: `source_documents/Project Requirements.pdf`.
 
 The requirements PDF does **not** define phases or dates. It defines three deliverables:
 1. Source code and README.
@@ -21,18 +21,18 @@ The requirements PDF does **not** define phases or dates. It defines three deliv
 
 The deadline of **Friday 2026-11-06 for report sections 1–2** comes from Abdallah, not from the PDF.
 
-## Current status (2026-11-05 15:41)
+## Current status (2026-11-05)
 
 | Part | Status |
 |---|---|
-| Report §1 Application Description | Written (Word report, 16 pages, Codex). Not changed on 2026-11-05 by Claude Code. |
-| Report §2 Application-Layer Protocol | Written; 32 message types, 32 error codes. **Tested on 2026-11-05: it works as written** (see below). |
+| Report §1 Application Description | Written; supplied LAU logo and all three names/IDs added by Codex at Abdallah's request on 2026-11-05. |
+| Report §2 Application-Layer Protocol | Written; 32 message types, 32 error codes. Covered protocol/test-server scenarios passed on 2026-11-05; not every protocol behavior is tested. Codex independently reran 57 unit tests and 227 network assertions and added results as section 2.13. |
 | Report §3 Design and Implementation | Not written. Some of its material now exists: the protocol layer, the threads and locks of the test server. |
 | Report §4 Testing and Sample Runs | Not written. Protocol test results exist; the two-device run and Wireshark captures are still missing. |
-| Report §5 Challenges, §6 References | Not written. |
+| Report §5 Challenges, §6 References | Section 5 and the full-project references remain later work; references and AI disclosure already accompany sections 1–2. |
 | Protocol code (`fatrat/protocol/`) | **Built and tested.** Meant to be reused by the real game. |
 | Game application (real server, host and player clients, interface) | **Not built.** |
-| Before submitting §1–§2 | Add team names and student IDs; export and check the PDF. |
+| Before submitting §1–§2 | Logo/names/IDs and protocol validation are included; export/check the submission PDF after any final user edits. |
 
 ## Timeline
 
@@ -51,6 +51,8 @@ All times EET (UTC+2). Times before 2026-11-05 02:00 come from git, file times a
 | 2026-11-05 12:50–12:52 | Claude Code | Final run, all passing: 57 unit tests, protocol check 36/36 and 151/151 (5 players), rooms check 40/40. Wrote `docs/protocol-test.md`, updated README, status checklist and vault. |
 | 2026-11-05 13:03 | Claude Code | Wrote this file (AGENTS.md = CLAUDE.md) and the vault note `csc430-protocol-test`. Abdallah will edit the report himself to show the test. |
 | 2026-11-05 15:41 | Abdallah + Claude Code | **Decision:** Wireshark captures and the second-device run wait for Section 4. They are not needed for the §1–§2 submission, and teammates have no time now; one person can do them later. Section 3 will be written after the real game is built. |
+
+2026-11-05 — Codex independently reran the existing suite on loopback: 57/57 unit, 36/36 single-client, 151/151 five-client, 40/40 rooms; saved raw outputs in docs/test-results/2026-11-05-codex/. At Abdallah's explicit request, added section 2.13 validation and the supplied LAU logo with all three names/IDs; kept black/white formatting and native equations. Full game, second-device run and Wireshark remain outstanding.
 
 ## Repository layout
 
@@ -114,11 +116,11 @@ Numbers worth quoting:
 
 ## Showing the test in the report
 
-Abdallah edits the Word report himself; agents do not change it unless he asks. The requirements put testing in §4 ("describe the results of your concurrency, error-handling, and other tests", with screenshots and Wireshark). Options:
+Abdallah explicitly asked Codex to add the tests and finish the report, then supplied the logo and names/IDs. These edits are now authorized and included. The requirements put testing in §4 ("describe the results of your concurrency, error-handling, and other tests", with screenshots and Wireshark). Options:
 - add a short "Protocol validation" subsection at the end of §2 now, or
 - keep it for §4.
 
-Ask the instructor which he wants.
+Current decision: protocol results are included now as section 2.13; full-game testing, second-device run and Wireshark remain Section 4 work.
 
 Material to include: the results table above, the numbers above, and screenshots of the PASS output, the server log, the server IP (`ipconfig getifaddr en0` on macOS, `ipconfig` on Windows) and Wireshark (see `docs/protocol-test.md`).
 
@@ -147,5 +149,5 @@ Update the last sentence once the two-device run and the captures exist.
   - Keep `README.md`, `docs/status-and-next-steps.md`, `docs/protocol-test.md`, the vault notes and this file in agreement.
 - If you change the report's message or error tables, update `fatrat/protocol/catalogue.py` too, and the reverse. `tests/test_report_consistency.py` enforces this.
 - Build the real server and clients on `fatrat/protocol/`. Use the standard library only. Document every file and important function; the requirements grade this.
-- Do not edit the Word report unless Abdallah asks. Commit only when asked. Nothing from 2026-11-05 after 01:28 is committed yet.
+- Do not edit the Word report unless Abdallah asks. Commit only when asked. Abdallah manages committing/pushing; check git status for the current state.
 - Next build step: the real server, host and player clients on top of `fatrat/protocol/`, then the remaining controls and the interface.

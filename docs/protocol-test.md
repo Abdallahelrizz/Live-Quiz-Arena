@@ -1,6 +1,6 @@
 # Fat-Rat protocol test
 
-Updated: 2026-11-05 by Claude Code.
+Updated: 2026-11-05 by Codex; original protocol implementation and checks by Claude Code.
 
 **What this is:** a test of the application-layer protocol from report section 2, built before the game itself. The game server and clients are still not built. This tests the protocol: framing, message formats, error handling, UDP behaviour, room limits and several rooms at once.
 
@@ -20,6 +20,12 @@ Server and client both ran on the same Mac. The requirement of at least one clie
 To check that the tests really detect mistakes, bugs were planted on purpose. All 11 were caught:
 - In the protocol code: reading past the end of a TCP frame, accepting duplicate or older UDP sequence numbers, allowing unknown fields, allowing duplicate JSON keys, counting booleans as integers, and moving LIVE_STATUS to TCP.
 - In the test server: a 51-player cap, a 4-player start gate, no early close when everyone has answered, and duplicate names allowed.
+
+## Independent rerun and report update 2026-11-05
+
+Codex independently reran the existing suite on the same Mac over loopback IPv4 127.0.0.1 (TCP 43100, UDP 43101): **57/57 unit tests, 36/36 single-client assertions, 151/151 five-client assertions and 40/40 room assertions passed**. The 227 network assertions include repeated checks; they are not 227 unique scenarios. The 10-second stalled-frame test ran in the one-client suite and was skipped in the five-client suite. Raw outputs, exact commands and summary are in [test-results/2026-11-05-codex](test-results/2026-11-05-codex/README.md).
+
+The Word report now contains **section 2.13 Protocol validation**, the supplied LAU School of Arts and Sciences logo, and the three students' names/IDs. The report remains black and white with native editable equations. These results demonstrate the covered protocol/test-server scenarios only; they do not show that the full protocol state machine or future game works. No full game implementation, second-device result or Wireshark capture is claimed. The test server was stopped after the rerun.
 
 ## What was built
 
@@ -93,6 +99,7 @@ Report section 2 requirement → checks:
 
 These parts of section 2 are not tested because they need the real server:
 - pause/resume and editing
+- explicit CLOSE_ROOM and its lost-response recovery
 - host removal of players
 - RESUME_SESSION and reconnect tokens
 - PING/PONG heartbeat

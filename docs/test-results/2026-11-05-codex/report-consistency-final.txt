@@ -1,0 +1,8 @@
+test_catalogue_table_matches (tests.test_report_consistency.MarkdownSpecTest) ... ok
+test_error_table_matches_catalogue (tests.test_report_consistency.WordReportTest) ... ok
+test_message_tables_match_catalogue (tests.test_report_consistency.WordReportTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+OK

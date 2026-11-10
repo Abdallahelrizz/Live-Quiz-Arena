@@ -142,3 +142,7 @@ Raw review: [claude-fat-rat-final.md](reviews/claude-fat-rat-final.md). Codex as
 - Equations and revised limits were independently checked. Document rendering and structural/monochrome verification are separate from unperformed application tests.
 
 Earlier pending-policy statements in this review log describe historical drafts and are superseded by this v7 entry.
+
+## Protocol implementation and report validation update 2026-11-05
+
+Claude Code subsequently implemented the protocol layer and a dedicated test peer (not the game). Codex reran the existing suite: 57 unit tests and 227 network assertions passed on one Mac over loopback, with raw evidence under [test-results/2026-11-05-codex](test-results/2026-11-05-codex/README.md). This supersedes earlier blanket statements that no network tests had run. It does not validate every behavioral rule or the full game. Section 2.13 now records these results and limitations. The report also includes the supplied institutional logo and all three names/IDs. A further focused wording review is archived in [claude-protocol-validation.md](reviews/claude-protocol-validation.md); it is additional to the six historical design/report reviews.

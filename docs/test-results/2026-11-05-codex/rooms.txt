@@ -1,0 +1,82 @@
+Fat-Rat rooms check client
+
+Largest allowed quiz and names   (30 questions x 8 choices, longest texts, 300 s)
+  PASS  L1   largest allowed quiz -> RESULT, and the host's STATE carries it back byte-for-byte
+              PUT_QUIZ frame 428,179 bytes; 30 questions, 8 choices each, 100-character title
+  PASS  L2   31 questions -> INVALID_QUIZ
+              ERROR INVALID_QUIZ (reply_to matches)
+  PASS  L3   0 questions -> INVALID_QUIZ
+              ERROR INVALID_QUIZ (reply_to matches)
+  PASS  L4   timer of 300,001 ms (over 300 s) -> INVALID_QUIZ
+              ERROR INVALID_QUIZ (reply_to matches)
+  PASS  L5   101-character title -> INVALID_QUIZ
+              ERROR INVALID_QUIZ (reply_to matches)
+  PASS  L6   32-character name accepted, 33-character name -> INVALID_USERNAME
+              RESULT / ERROR INVALID_USERNAME (reply_to matches)
+
+Maximum players and room limits   (one room, host + up to 50 players)
+  PASS  C1   CREATE_ROOM -> RESULT (role HOST, new PIN) + host STATE LOBBY
+              room PIN 666896
+  PASS  C2   same saved host_token creates another room while the first is unfinished -> HOST_HAS_ROOM
+              ERROR HOST_HAS_ROOM (reply_to matches)
+  PASS  C3   START_QUIZ before a quiz is loaded -> INVALID_STATE
+              ERROR INVALID_STATE (reply_to matches)
+  PASS  C4   PUT_QUIZ with a 9-choice question -> INVALID_QUIZ
+              ERROR INVALID_QUIZ (reply_to matches)
+  PASS  C5   PUT_QUIZ with a valid quiz -> RESULT
+              RESULT
+  PASS  C6   START_QUIZ with 4 connected players -> NOT_ENOUGH_PLAYERS (5 needed)
+              ERROR NOT_ENOUGH_PLAYERS (reply_to matches)
+  PASS  C7   46 players join at the same time -> all accepted; room has 50 players
+              46/46 joined in 0.08 s
+  PASS  C8   51st player -> ROOM_FULL
+              ERROR ROOM_FULL (reply_to matches)
+  PASS  C9   a player disconnects (no LEAVE) -> still full, its slot is kept -> ROOM_FULL
+              ERROR ROOM_FULL (reply_to matches)
+  PASS  C10  LEAVE_ROOM -> RESULT {left: true}, then the server closes that connection
+              RESULT
+  PASS  C11  joining with the name of the player who left -> NAME_TAKEN (name stays reserved)
+              ERROR NAME_TAKEN (reply_to matches)
+  PASS  C12  the slot freed by LEAVE can be used -> new player accepted
+              RESULT
+  PASS  C13  3 players race for the last free slot at the same time -> exactly 1 accepted, 2 ROOM_FULL
+              RESULT, ERROR ROOM_FULL (reply_to matches), ERROR ROOM_FULL (reply_to matches)
+  PASS  C14  START_QUIZ with a full room -> every connected player gets STATE OPEN
+              49/49 connected players within 18 ms
+  PASS  C15  49 players answer at the same time -> every answer accepted exactly once
+              49/49 accepted in 5 ms
+  PASS  C16  the disconnected player still counts as eligible, so the question stays OPEN
+              live counts {'answered_count': 49, 'eligible_count': 50}
+  PASS  C17  host CLOSE_QUESTION -> every player gets STATE RESULTS with a correct own result
+              49/49 consistent, reason HOST_CLOSED
+  PASS  C18  leaderboard lists all 52 participants (50 active + 2 who left, labelled LEFT), ties grouped
+              52 players on 2 rank rows, 2 LEFT
+  PASS  C19  NEXT_QUESTION after the last question -> FINISHED (COMPLETED) for everyone
+              50/50 received FINISHED
+  PASS  C20  joining a finished room -> ROOM_FINISHED
+              ERROR ROOM_FINISHED (reply_to matches)
+  PASS  C21  after finishing, the same host_token can create a new room
+              RESULT
+
+3 rooms at the same time   (separate hosts, 5 players each)
+  PASS  R1   3 hosts create rooms at the same time -> 3 different PINs
+              PINs 694405, 877702, 150151
+  PASS  R2   each host loads its own 2-question quiz
+  PASS  R3   15 players join their rooms at the same time -> all accepted
+              15/15
+  PASS  R4   the same name 'rat' is accepted once in every room (names are per room)
+  PASS  R5   all 15 players register UDP (REQUEST_UDP_BIND, UDP_HELLO, UDP_BOUND)
+              15/15
+  PASS  R6   hosts start together -> each player gets its own room's question; attempts differ per room
+  PASS  R7   everyone answers -> each room closes early (ALL_ANSWERED) with each player's own result
+              correct answers per room: 2, 3, 4
+  PASS  R8   every player received LIVE_STATUS over UDP counting only its own room (5 eligible)
+              45 snapshots accepted in total
+  PASS  R9   separate timers: room 1 waits for its own timeout while the other rooms close at once
+              room 1 closed after 6.0 s (TIMEOUT), others after 0.0 s (ALL_ANSWERED)
+  PASS  R10  final leaderboards: each room ranks exactly its own 5 players
+  PASS  R11  final scores add up per room (room 1 scored nothing on question 2, rooms 2-3 did)
+  PASS  R12  no player or host ever received a message for another room
+  PASS  M2   every message received by all 80 simulated clients matched the catalogue
+
+40/40 checks passed - rooms check PASSED

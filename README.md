@@ -3,8 +3,8 @@
 CSC430 Computer Networks course project at Lebanese American University.
 
 **Status as of 5 November 2026:**
-- Sections 1 and 2 describe the reviewed design.
-- The section 2 protocol has been built and tested. Server and client ran on one Mac: 57 automated tests plus 227 network checks, all passing. The run with a client on a second device and the Wireshark captures are still to do.
+- Sections 1 and 2 describe the reviewed design; section 2.13 records the initial protocol validation. The Word report includes the supplied LAU logo and team names/IDs.
+- The section 2 protocol has been built and tested. Server and client ran on one Mac: 57 automated tests plus 227 network checks, all passing. Codex independently reran the suite over loopback with the same passing totals; raw outputs are in docs/test-results/2026-11-05-codex/. The run with a client on a second device and the Wireshark captures are still to do.
 - The quiz game itself (real server, host and player clients, interface) has not been built.
 
 Fat-Rat is a planned multiplayer quiz using Python raw TCP/UDP sockets and threading. Each room has one noncompeting host, starts with at least five connected players, and supports a design limit of 50 ACTIVE players excluding the host. Quizzes contain 1–30 questions with 2–8 choices. Players select cheese symbols; Mr Fat Rat's feeding progress represents confirmed cumulative points. A saved host identity owns one unfinished room at a time and can create another after finishing or closing it.

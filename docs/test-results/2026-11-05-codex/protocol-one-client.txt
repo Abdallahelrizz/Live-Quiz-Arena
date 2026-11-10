@@ -1,0 +1,108 @@
+Fat-Rat protocol check client
+
+TCP framing   (this client 127.0.0.1 -> server 127.0.0.1:43100)
+  PASS  T1   JOIN_ROOM sent 1 byte at a time (129 sends) is reassembled; wrong PIN -> INVALID_PIN
+              ERROR INVALID_PIN (reply_to matches)
+  PASS  T2   JOIN_ROOM split inside its 4-byte header -> RESULT (identity) then STATE LOBBY
+              joined as 'codex-one', PIN 027652
+  PASS  T3   3 requests glued into one send -> RESULT, STATE, RESULT, STATE, RESULT in order
+              RESULT STATE RESULT STATE RESULT
+
+Invalid messages   (each gets an ERROR; the connection stays open)
+  PASS  V1   SUBMIT_ANSWER missing choice_id -> INVALID_MESSAGE, reply_to matches
+              ERROR INVALID_MESSAGE (reply_to matches)
+  PASS  V2   unknown message type -> INVALID_MESSAGE
+              ERROR INVALID_MESSAGE (reply_to matches)
+  PASS  V3   unknown data field -> INVALID_MESSAGE
+              ERROR INVALID_MESSAGE (reply_to matches)
+  PASS  V4   boolean where an integer is required -> INVALID_MESSAGE
+              ERROR INVALID_MESSAGE (reply_to matches)
+  PASS  V5   valid host command from a player -> NOT_HOST
+              ERROR NOT_HOST (reply_to matches)
+  PASS  V6   request naming another room -> ROOM_MISMATCH
+              ERROR ROOM_MISMATCH (reply_to matches)
+  PASS  V7   connection still works afterwards: GET_STATE -> RESULT + STATE
+
+UDP registration and LIVE_STATUS
+  PASS  U1   UDP_HELLO from UDP port 56464 -> UDP_BOUND over TCP
+              1 HELLO(s) sent
+
+Answers
+  PASS  A1   STATE OPEN gives the player selection symbols only (no question text, no correct answer)
+              4 choices, 10 s
+  PASS  A2   answer with a choice that is not in the question -> INVALID_CHOICE
+              ERROR INVALID_CHOICE (reply_to matches)
+  PASS  A3   valid answer -> RESULT accepted (no correctness or points revealed yet)
+              RESULT
+  PASS  A4   second answer (new request) -> ALREADY_ANSWERED naming the accepted choice
+              ERROR ALREADY_ANSWERED (reply_to matches)
+  PASS  A5   same request re-sent -> original RESULT again (replay, not a second answer)
+              RESULT
+  PASS  A6   answer for an old/unknown attempt -> STALE_ATTEMPT
+              ERROR STALE_ATTEMPT (reply_to matches)
+  PASS  A7   timer expires -> STATE RESULTS: correct answer revealed, points and leaderboard consistent
+              correct answer, 900 points, rank 1 of 2 rows
+  PASS  A8   answer after the question closed -> ANSWER_LATE
+              ERROR ANSWER_LATE (reply_to matches)
+      #   seq  remaining   bytes  verdict
+      1     1    9999 ms     377  accepted
+      2     2    9494 ms     377  accepted
+      3     4    8484 ms     377  accepted
+      4     5    7979 ms     377  accepted
+      5     5    7979 ms     377  duplicate seq
+      6     6    7475 ms     377  wrong binding_id
+      7     6    7475 ms     377  accepted
+      8     7    6974 ms     377  wrong source address
+      9     7    6974 ms     377  accepted
+     10     9    5964 ms     377  accepted
+     11     8    6469 ms     377  older seq (out of order)
+     12    10    5459 ms     378  wrong question/attempt
+     13    10    5459 ms     378  accepted
+     14    11    4954 ms     378  future control_rev
+     15    11    4954 ms     378  accepted
+     16     -         -     991  oversize (>512 bytes)
+     17    12    4449 ms     378  accepted
+     18     -         -     371  malformed JSON or fields
+     19    13    3944 ms     378  accepted
+     20    14    3441 ms     378  accepted
+     21    15    2936 ms     378  accepted
+     22    16    2433 ms     378  accepted
+     23    17    1928 ms     378  accepted
+     24    18    1423 ms     378  accepted
+     25    19     918 ms     377  accepted
+     26    20     413 ms     377  accepted
+  PASS  U2   accepted snapshots have strictly increasing seq
+              18 accepted of 26 received
+  PASS  U3   duplicate snapshot rejected
+  PASS  U4   reordered (older) snapshot rejected, so the countdown cannot jump back
+  PASS  U5   bad datagrams rejected: wrong binding, stale attempt, future revision, oversize, malformed
+  PASS  U5b  no snapshot from an address other than the server's UDP port is accepted
+              wrong-source copy arrived and was rejected
+  PASS  U6   lost snapshot tolerated: no retransmission, later snapshots still used
+              never arrived: seq [3]
+  PASS  U7   countdown from accepted snapshots never goes up
+              9999 ms -> 413 ms
+  PASS  U8   every accepted datagram is at most 512 bytes
+              largest accepted 378 bytes
+  PASS  M1   every server message matched the catalogue (envelope, fields, RESULT, STATE rules)
+  PASS  T4   second client joining as 'CODEX-ONE' (same name, other case) -> NAME_TAKEN
+              ERROR NAME_TAKEN (reply_to matches)
+
+Fatal input   (only that connection is closed; the server keeps running)
+  PASS  F1   invalid JSON -> ERROR INVALID_MESSAGE (reply_to null), then closed
+              ERROR INVALID_MESSAGE (reply_to null), closed
+  PASS  F2   duplicate JSON key -> ERROR INVALID_MESSAGE, then closed
+              ERROR INVALID_MESSAGE (reply_to null), closed
+  PASS  F3   protocol version 2 -> ERROR UNSUPPORTED_VERSION (reply_to matches), then closed
+              ERROR UNSUPPORTED_VERSION (reply_to matches), closed
+  PASS  F4   frame length 0 -> closed without a reply
+              closed after 0.00 s
+  PASS  F5   frame length 2,000,000 (> 1 MiB) -> closed at once, body never read
+              closed after 0.00 s
+  ....  F6   waiting up to 13 s for the stalled-frame timeout
+  PASS  F6   frame stalls after 10 of 104 bytes -> ERROR then closed after about 10 s
+              closed after 10.0 s, ERROR INVALID_MESSAGE (reply_to null)
+  PASS  F7   server still accepts and serves a new client after all of the above
+              RESULT
+
+36/36 checks passed - protocol check PASSED

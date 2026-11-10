@@ -1,6 +1,6 @@
 # Fat-Rat status and remaining work
 
-Updated: 2026-11-05 by Claude Code.
+Updated: 2026-11-05 by Codex.
 
 **The written design for sections 1 and 2 is complete with the agreed changes.** On 2026-11-05 the instructor asked for a test. The section 2 protocol was then built and tested, on one Mac only; see the next section. The quiz game itself (real server, clients, interface) has not been built. "Report complete" means the design is documented; it does not mean the game works or that the project is finished.
 
@@ -15,9 +15,10 @@ Details, commands and the full check list are in [protocol-test.md](protocol-tes
 - [x] Planted bugs (7 in the protocol code, 4 in the test server) were all caught by the tests.
 - [ ] Run the protocol and rooms checks with the client on a **second device**.
 - [ ] Capture the TCP and UDP traffic in Wireshark; screenshots are listed in protocol-test.md. Deferred to Section 4 (Abdallah, 2026-11-05). Install with `brew install --cask wireshark-app`.
-- [ ] Decide with the instructor whether these results go in the report now or in Section 4.
+- [x] Add the protocol results to section 2.13 at Abdallah's request; second-device and Wireshark work remains deferred to Section 4.
+- [x] Independently rerun the existing suite with Codex: 57 unit tests and 227 network assertions passed on one Mac over loopback; save raw outputs under docs/test-results/2026-11-05-codex/.
 
-These checks ran against `protocol_check/server.py`, a test server. They show that the protocol works. They are not results for the future game server, so the application tests below stay unchecked until that server exists.
+These checks ran against `protocol_check/server.py`, a test server. They show that the covered scenarios pass on the test server; unexercised protocol behavior is not established. They are not results for the future game server, so the application tests below stay unchecked until that server exists.
 
 ## Completed design and document checks
 
@@ -26,10 +27,10 @@ These checks ran against `protocol_check/server.py`, a test server. They show th
 - [x] Recorded six completed Claude reviews and Codex's assessment/corrections in [protocol-review.md](protocol-review.md), with raw responses in [reviews](reviews/).
 - [x] Checked scoring calculations and equivalent integer rounding at representative time limits and remaining times. This was arithmetic validation, not a running-server scoring test.
 - [x] Checked the 32 unique message types and document structure for the revised protocol fields and stale pending-policy text.
-- [x] Generated the 16-page Word report, rendered it, and visually inspected every final page, using exact image comparisons to preserve inspection of unchanged pages after small corrections.
+- [x] Generated the Word report with formal logo/team opening and section 2.13, rendered it, and visually inspected the final pages, using exact image comparisons to preserve inspection of unchanged pages after small corrections.
 - [x] Verified black text, black table borders, white backgrounds, monochrome embedded diagrams and two editable native Word equations.
 
-The current artifact is [the sections 1 and 2 report](../output/docx/CSC430_Fat_Rat_Sections_1_and_2.docx). Local document-QA evidence is in `tmp/report-qa/verification.txt`; its final render is `tmp/report-qa/complete-black-verified/`. Rendered QA PDFs and page images are internal checks, not the submission PDF.
+The current artifact is [the sections 1 and 2 report](../output/docx/CSC430_Fat_Rat_Sections_1_and_2.docx). Local document-QA evidence is in `tmp/report-qa/verification.txt`; its final render is `tmp/report-qa/protocol-validation-final/`. Rendered QA PDFs and page images are internal checks, not the submission PDF.
 
 ## Implementation still required
 
@@ -56,7 +57,7 @@ The detailed scenarios are also in the protocol's later-verification section. Th
 
 ## Report and submission work still required
 
-- [ ] Add the three team members' names and student IDs.
+- [x] Add Abdallah Elrizz (202301345), Rayan Madi (202401943) and Tala Daouk (202304053), with the supplied institutional logo.
 - [ ] Apply any page-length guidance subsequently supplied by the instructor; the provided requirements specify no page/word limit.
 - [ ] Export and check the actual submission PDF. The existing rendered PDF is internal QA only.
 - [ ] After implementation, write Section 3 Design and Implementation.

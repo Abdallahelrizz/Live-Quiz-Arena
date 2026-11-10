@@ -1,0 +1,64 @@
+test_clean_eof_between_frames (tests.test_framing.FramingTest) ... ok
+test_encoder_refuses_frames_over_1_mib (tests.test_framing.FramingTest) ... ok
+test_eof_inside_header_and_inside_body (tests.test_framing.FramingTest) ... ok
+test_header_is_big_endian_byte_length_of_utf8_body (tests.test_framing.FramingTest) ... ok
+test_idle_connection_is_not_a_partial_frame (tests.test_framing.FramingTest) ... ok
+test_largest_allowed_frame_is_accepted (tests.test_framing.FramingTest) ... ok
+test_length_above_1_mib_is_rejected_without_reading_the_body (tests.test_framing.FramingTest) ... ok
+test_length_zero_is_rejected (tests.test_framing.FramingTest) ... ok
+test_message_sent_one_byte_at_a_time (tests.test_framing.FramingTest) ... ok
+test_one_and_a_half_messages_then_the_rest (tests.test_framing.FramingTest) ... ok
+test_one_message_round_trip (tests.test_framing.FramingTest) ... ok
+test_split_at_every_position_including_inside_header (tests.test_framing.FramingTest) ... ok
+test_stalled_partial_frame_times_out (tests.test_framing.FramingTest) ... ok
+test_three_messages_in_one_send (tests.test_framing.FramingTest) ... ok
+test_accepted_payload (tests.test_framing.StrictJsonTest) ... ok
+test_rejected_payloads (tests.test_framing.StrictJsonTest) ... ok
+test_32_error_codes (tests.test_messages.CatalogueTest) ... ok
+test_32_unique_message_types (tests.test_messages.CatalogueTest) ... ok
+test_directions_and_transports (tests.test_messages.CatalogueTest) ... ok
+test_each_missing_data_field_is_rejected (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_each_wrongly_typed_data_field_is_rejected (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_error_is_correlated_with_a_usable_request_id (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_host_token_format (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_identifier_formats (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_integer_rules (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_non_canonical_token_is_rejected (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_room_id_required_only_after_attachment (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_udp_hello_nonce (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_unknown_fields_are_rejected (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_unknown_type_and_missing_data (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_versions (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_wrong_transport_or_direction (tests.test_messages.InvalidClientMessagesTest) ... ok
+test_choice_count_boundaries (tests.test_messages.QuizRulesTest) ... ok
+test_choice_identity_rules (tests.test_messages.QuizRulesTest) ... ok
+test_question_count_boundaries (tests.test_messages.QuizRulesTest) ... ok
+test_text_limits_count_characters_not_bytes (tests.test_messages.QuizRulesTest) ... ok
+test_timer_boundaries (tests.test_messages.QuizRulesTest) ... ok
+test_clients_ignore_server_extension_fields_unless_strict (tests.test_messages.ServerMessagesTest) ... ok
+test_error_rules (tests.test_messages.ServerMessagesTest) ... ok
+test_report_example_result_and_live_status (tests.test_messages.ServerMessagesTest) ... ok
+test_result_data_per_request (tests.test_messages.ServerMessagesTest) ... ok
+test_state_invariants (tests.test_messages.ServerMessagesTest) ... ok
+test_valid_player_states (tests.test_messages.ServerMessagesTest) ... ok
+test_every_client_message_type_validates (tests.test_messages.ValidClientMessagesTest) ... ok
+test_report_example_submit_answer (tests.test_messages.ValidClientMessagesTest) ... ok
+test_catalogue_table_matches (tests.test_report_consistency.MarkdownSpecTest) ... ok
+test_error_table_matches_catalogue (tests.test_report_consistency.WordReportTest) ... ok
+test_message_tables_match_catalogue (tests.test_report_consistency.WordReportTest) ... ok
+test_encoder_refuses_oversized_datagrams (tests.test_udp.DatagramSizeTest) ... ok
+test_parse_drops_bad_datagrams (tests.test_udp.DatagramSizeTest) ... ok
+test_worst_case_live_status_fits_in_512_bytes (tests.test_udp.DatagramSizeTest) ... ok
+test_worst_case_udp_hello_fits (tests.test_udp.DatagramSizeTest) ... ok
+test_nothing_accepted_before_udp_bound_or_without_a_live_question (tests.test_udp.LiveStatusFilterTest) ... ok
+test_rebind_resets_seq_and_retires_old_binding (tests.test_udp.LiveStatusFilterTest) ... ok
+test_rejections_that_seq_alone_would_miss (tests.test_udp.LiveStatusFilterTest) ... ok
+test_strictly_increasing_seq (tests.test_udp.LiveStatusFilterTest) ... ok
+test_loss_duplication_and_reordering (tests.test_udp.RealSocketImpairmentTest) ... ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 1.185s
+
+OK
+
+    worst-case LIVE_STATUS = 464 bytes (limit 512)

@@ -2,7 +2,7 @@
 
 Updated: 2026-11-05. Source: Abdallah's decisions in this conversation and the course requirements PDF. These are planned behaviors, not implemented features.
 
-Current verification status and unfinished work are tracked in [status-and-next-steps.md](status-and-next-steps.md). Application tests have not run; report review and document checks are complete.
+Current verification status and unfinished work are tracked in [status-and-next-steps.md](status-and-next-steps.md). The protocol layer and test peer have passed the documented one-Mac checks; the real game is still unbuilt. See the status checklist and protocol-test.md for exact coverage.
 
 ## Agreed with Abdallah
 
@@ -52,3 +52,7 @@ The product is now named Fat-Rat. The team selected 5-50 players excluding the h
 ## Completed report integration 2026-11-05
 
 The protocol now specifies saved host credentials, creation recovery and CLOSE_ROOM. Finished/explicitly closed rooms release ownership; accidental disconnection does not. Early closure processes any already-due timeout, discards a still-unclosed attempt/edit without scoring it and preserves completed scores. The host profile credential persists across rooms and server restart. These are report design details, not implemented features. The report uses only black text/borders on white and editable native Word scoring equations.
+
+## Protocol validation and formal report 2026-11-05
+
+Claude Code built the reusable protocol layer and dedicated test peer. Codex reran 57 unit tests and 227 network assertions successfully on one Mac over loopback. Section 2.13 records only those covered scenarios; full game tests, second-device LAN testing and Wireshark remain future work. At Abdallah's request the formal opening uses the supplied LAU School of Arts and Sciences logo and the three provided names/student IDs.
