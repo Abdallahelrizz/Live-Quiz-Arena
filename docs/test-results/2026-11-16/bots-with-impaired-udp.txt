@@ -1,0 +1,3 @@
+Running 1 room(s) with 5 players each on 127.0.0.1
+  room 1: PIN 859496
+  room 1 (PIN 859496): finished; winner r1-p1 with 2564; 15 answers, 35 UDP snapshots

@@ -69,6 +69,7 @@ class Link:
         self.pending = {}              # request_id -> request type, to validate the RESULT
         self.problems: List[str] = []  # protocol violations seen in server messages
         self.closed = threading.Event()
+        self._send_lock = threading.Lock()
         threading.Thread(target=self._read_loop, daemon=True).start()
 
     def _read_loop(self) -> None:
@@ -89,6 +90,11 @@ class Link:
                     validate_result(message["data"], self.pending[message["reply_to"]])
             except ProtocolError as exc:
                 self.problems.append(f"{message.get('type')}: {exc.detail}")
+            if message.get("type") == "PING":      # the game server checks that clients are alive
+                try:
+                    self.send({"v": 1, "type": "PONG", "data": {"ping_id": message["data"]["ping_id"]}})
+                except (OSError, KeyError, TypeError):
+                    pass
             if self.on_message:
                 self.on_message(message)
             self.inbox.put(message)
@@ -103,7 +109,8 @@ class Link:
         return message
 
     def send(self, message: dict) -> None:
-        self.sock.sendall(encode_frame(message))
+        with self._send_lock:                      # the reader thread also sends (PONG)
+            self.sock.sendall(encode_frame(message))
 
     def send_raw(self, data: bytes) -> None:
         self.sock.sendall(data)

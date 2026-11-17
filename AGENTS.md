@@ -1,6 +1,6 @@
 # Fat-Rat: project memory for AI agents
 
-**Last updated: 2026-11-05 by Codex**
+**Last updated: 2026-11-17 by Claude Code**
 
 `AGENTS.md` (read by Codex) and `CLAUDE.md` (read by Claude Code) are identical copies. When you change one, copy it over the other and update the timestamp line in both. Check with `cmp AGENTS.md CLAUDE.md`.
 
@@ -8,7 +8,7 @@
 
 1. Shared memory rules: `~/Documents/Vault/RULES.md`. Read them at the start of every task. After work, update the vault notes and append a line to `~/Documents/Vault/log.md`.
 2. Vault entry note: `~/Documents/Vault/LAUprojects/csc430-computer-networks/_overview.md`. Protocol test note: `LAUprojects/csc430-computer-networks/testing/csc430-protocol-test.md`.
-3. Repository: `README.md` (entry point), `docs/status-and-next-steps.md` (checklist), `docs/protocol-test.md` (test commands and results).
+3. Repository: `README.md` (entry point), `docs/project-plan.md` (the approved plan for all remaining work), `docs/status-and-next-steps.md` (checklist), `docs/study/01-how-fat-rat-works.md` (how the code works), `docs/protocol-test.md` (the earlier protocol test).
 
 ## The project
 
@@ -21,7 +21,21 @@ The requirements PDF does **not** define phases or dates. It defines three deliv
 
 The deadline of **Friday 2026-11-06 for report sections 1–2** comes from Abdallah, not from the PDF.
 
-## Current status (2026-11-05)
+## Current status (2026-11-17)
+
+**Read this block first; the table below it is the 5 November picture and is kept for history.**
+
+- Sections 1–2 were submitted (`submitted_documents/`). Final submission and demo are expected around **2026-11-30** (Abdallah's estimate on 2026-11-16; confirm with the instructor).
+- Abdallah approved a nine-section plan on 2026-11-16: `docs/project-plan.md`. Order: backend first, then GUI. The instructor said he would appreciate an extraordinary GUI; the requirements PDF gives a GUI no credit by itself.
+- **Built and tested on one Mac on 2026-11-16 and 17:** the game server (`fatrat/server/`), the client core, terminal host, terminal player and bots (`fatrat/client/`). Every message of section 2 is implemented, including heartbeat, rate limit (10/s, burst 20), size budget and the seven editing messages. 118 automated tests pass (57 protocol, 39 room engine, 14 over real sockets, 8 client files); the rooms check passes 40/40 against the real server; bots completed 3 rooms of 5 and one room of 50; a full quiz was played through the terminal clients. A planted missing-lock bug was caught by the concurrent-create test. Outputs in `docs/test-results/2026-11-16/` and `2026-11-17/`. The original November-5 test list in `docs/status-and-next-steps.md` is reconciled: only the multi-device items and Wireshark remain.
+- **Not built:** the GUI. The terminal host has every editing command (`edit`, `edit <n>`, `move <n> <m>`, `append`, `delete`, `questions`), so the terminal clients are a complete demo fallback.
+- **Not done:** client on a second device, Wireshark captures, screenshots, demo rehearsal. Report §3–§6 exist only as a draft, `docs/report-sections-3-to-6-draft.md`, with [TO DO] marks where evidence is missing; nothing has been added to the Word report.
+- `python3 -m fatrat.server --impair-udp` is a test mode that drops, duplicates and reorders LIVE_STATUS on purpose, for the demo and for §4.
+- **GUI decision:** Abdallah designs it in Claude Design. Plan: render that HTML in a pywebview window driven by `fatrat/client/core.py`, with no HTTP or WebSocket; fall back to PySide6 if the instructor requires a Python-drawn interface. Ask the instructor before building. The backend is done; the design brief for Abdallah is `docs/gui-design-brief.md`. Standalone Claude Design (claude.ai/design) closes by 2026-12-14 and now lives inside Claude as the Design artifact type; design there.
+- **The team cannot yet explain the system.** The demo is 50% and individual. After each piece of work, add to `docs/study/` (walkthrough and `demo-questions.md`). Keep the code simple enough to explain.
+- Apple's Python on this Mac keeps bytecode in `~/Library/Caches/com.apple.python`. If a file is changed twice within one second with the same size, a stale cache can be used; `touch` the file.
+
+## Status on 2026-11-05 (history)
 
 | Part | Status |
 |---|---|
@@ -51,6 +65,10 @@ All times EET (UTC+2). Times before 2026-11-05 02:00 come from git, file times a
 | 2026-11-05 12:50–12:52 | Claude Code | Final run, all passing: 57 unit tests, protocol check 36/36 and 151/151 (5 players), rooms check 40/40. Wrote `docs/protocol-test.md`, updated README, status checklist and vault. |
 | 2026-11-05 13:03 | Claude Code | Wrote this file (AGENTS.md = CLAUDE.md) and the vault note `csc430-protocol-test`. Abdallah will edit the report himself to show the test. |
 | 2026-11-05 15:41 | Abdallah + Claude Code | **Decision:** Wireshark captures and the second-device run wait for Section 4. They are not needed for the §1–§2 submission, and teammates have no time now; one person can do them later. Section 3 will be written after the real game is built. |
+| 2026-11-10 12:53 | Abdallah | Commit "final update": submitted PDF added under `submitted_documents/`; the Word report was deleted from `output/docx/` in that commit. |
+| 2026-11-16 | Abdallah + Claude Code | Plan for all remaining work approved (`docs/project-plan.md`). Word report restored from commit `1c54dc1` so the report-consistency tests run again. Built the game server, client core, terminal clients and bots; 89 tests pass; 40/40 rooms check against the real server; study notes started. Nothing committed. |
+| 2026-11-17 (later) | Abdallah + Claude Code | Terminal host editing commands (`edit`, `edit <n>`, `move`, `questions`); `ClientSession.new_connection`; 20 more tests (concurrent create with a planted-bug check, closing races, lost create and close replies, UDP rebinding and silence, saved identity and quiz files); 118 pass. Status checklist reconciled; GUI design brief written. Nothing committed; Abdallah will push. |
+| 2026-11-17 | Abdallah + Claude Code | Abdallah asked to finish the remaining backend work. Added heartbeat, rate limit, size budget, the seven editing messages, lost-create recovery in the host client, `--impair-udp`; 98 tests pass. Wrote the draft of report §3–§6. Nothing committed. |
 
 2026-11-05 — Codex independently reran the existing suite on loopback: 57/57 unit, 36/36 single-client, 151/151 five-client, 40/40 rooms; saved raw outputs in docs/test-results/2026-11-05-codex/. At Abdallah's explicit request, added section 2.13 validation and the supplied LAU logo with all three names/IDs; kept black/white formatting and native equations. Full game, second-device run and Wireshark remain outstanding.
 
@@ -58,6 +76,19 @@ All times EET (UTC+2). Times before 2026-11-05 02:00 come from git, file times a
 
 | Path | Contents |
 |---|---|
+| `fatrat/server/main.py` | **The game server.** Sockets, accept loop, one reader thread per connection, request routing. `python3 -m fatrat.server`. |
+| `fatrat/server/connection.py` | One TCP connection: outgoing queue and writer thread; `error()` and `result()` builders. |
+| `fatrat/server/registry.py` | All rooms, PINs, host ownership, creation ledger. Registry lock. |
+| `fatrat/server/room.py` | One room: members, phases, answers, scoring at close, pause, removal, resume, UDP binding, `tick()`. One lock per room. |
+| `fatrat/server/projection.py`, `scoring.py`, `timer.py`, `udp_service.py` | Per-recipient STATE; score and leaderboard; room timer thread; UDP socket. |
+| `fatrat/client/core.py` | `ClientSession`: all client networking, no interface code. Events: state, live, connection, notice. |
+| `fatrat/client/terminal_host.py`, `terminal_player.py`, `terminal_common.py` | Terminal interfaces. |
+| `fatrat/client/bot.py` | Simulated players and hosts; `run_rooms()` is also used by the tests. |
+| `fatrat/client/storage.py`, `quizfile.py`; `quizzes/` | Saved host identity and tokens (`~/.fatrat/profile.json`); quiz file format and `make_question`; sample quizzes. |
+| `docs/gui-design-brief.md` | What to design for the GUI (screens, data per screen, rules), for Claude Design. |
+| `fatrat/common.py` | Shared helpers (IDs, tokens, clock, LAN address, logging). `protocol_check/common.py` re-exports them. |
+| `tests/test_room.py`, `tests/test_game.py`, `tests/test_client_files.py` | Room engine tests with a fake clock; full games over real sockets; the client's saved identity and quiz files. |
+| `docs/study/` | Walkthrough of the code and demo questions with answers. |
 | `source_documents/` | Course PDFs: requirements, Wireshark getting started, HTTP Wireshark sample lab. |
 | `docs/section-2-protocol.md` | Detailed protocol specification (source of the report's §2). |
 | `docs/gameplay-decisions.md`, `docs/protocol-review.md`, `docs/reviews/` | Agreed gameplay, review findings, raw reviews. |
@@ -68,7 +99,7 @@ All times EET (UTC+2). Times before 2026-11-05 02:00 come from git, file times a
 | `fatrat/protocol/catalogue.py` | The 32 message types (sender, receiver, transport, fields), 32 error codes, limits. |
 | `fatrat/protocol/messages.py` | Validation: envelope, data fields, RESULT per request, ERROR rules, STATE rules, quiz limits. |
 | `fatrat/protocol/udp.py` | 512-byte datagrams; LIVE_STATUS filter (source, binding, IDs, control_rev, strictly increasing seq). |
-| `tests/` | 57 automated tests. `test_report_consistency.py` reads the Word report's tables and fails if they differ from `catalogue.py`. |
+| `tests/` | 118 automated tests: 57 protocol, `test_room.py` 39, `test_game.py` 14, `test_client_files.py` 8. `test_report_consistency.py` reads the Word report's tables and fails if they differ from `catalogue.py`. |
 | `protocol_check/server.py` | **Test server, not the game server.** Scripted one-question session per player with deliberate UDP loss, duplication, reordering and corruption; also hosts real rooms. |
 | `protocol_check/rooms.py` | Room engine of the test server: CREATE_ROOM, JOIN_ROOM (50 cap), PUT_QUIZ, START_QUIZ (5-player gate), answers, scoring, NEXT_QUESTION, LEAVE_ROOM, LIVE_STATUS. No pause, editing, removal, reconnect or heartbeat. |
 | `protocol_check/client.py` | Protocol check (T/V/U/A/F checks). |
@@ -80,7 +111,12 @@ All times EET (UTC+2). Times before 2026-11-05 02:00 come from git, file times a
 Python 3.8+, standard library only (this Mac has 3.9.6). Run from the repository folder.
 
 ```bash
-python3 -m unittest -v                                          # 57 automated tests, about 2 s
+python3 -m fatrat.server                                        # the game server; prints its IPv4 address
+python3 -m fatrat.client.terminal_host --server <IP> --quiz quizzes/networks.json
+python3 -m fatrat.client.terminal_player --server <IP>
+python3 -m fatrat.client.bot --server <IP> --pin <PIN> --players 5      # fill a room
+python3 -m fatrat.client.bot --server <IP> --rooms 3 --players 5        # three whole rooms
+python3 -m unittest -v                                          # 118 automated tests, about 15 s
 python3 -m protocol_check.server                                # prints its IPv4 address and a test-room PIN
 python3 -m protocol_check.client --server <IP> --pin <PIN>      # protocol check, about 25 s
 python3 -m protocol_check.client --server <IP> --pin <PIN> --players 5 --skip-slow
@@ -150,4 +186,5 @@ Update the last sentence once the two-device run and the captures exist.
 - If you change the report's message or error tables, update `fatrat/protocol/catalogue.py` too, and the reverse. `tests/test_report_consistency.py` enforces this.
 - Build the real server and clients on `fatrat/protocol/`. Use the standard library only. Document every file and important function; the requirements grade this.
 - Do not edit the Word report unless Abdallah asks. Commit only when asked. Abdallah manages committing/pushing; check git status for the current state.
-- Next build step: the real server, host and player clients on top of `fatrat/protocol/`, then the remaining controls and the interface.
+- Next steps, in order: second-device run; Wireshark captures and screenshots; GUI; move the §3–§6 draft into the report with the evidence; rehearsals. Follow `docs/project-plan.md`.
+- `protocol_check/server.py` is the old test server. `fatrat/server/` is the game server. `protocol_check.rooms_client` works against both; `protocol_check.client` needs the old test server (it expects its scripted session).

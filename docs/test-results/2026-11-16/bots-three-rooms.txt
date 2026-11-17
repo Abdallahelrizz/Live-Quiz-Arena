@@ -1,0 +1,7 @@
+Running 3 room(s) with 5 players each on 127.0.0.1
+  room 1: PIN 113035
+  room 3: PIN 561204
+  room 2: PIN 038245
+  room 1 (PIN 113035): finished; winner r1-p5 with 1787; 15 answers, 37 UDP snapshots
+  room 2 (PIN 038245): finished; winner r2-p3 with 1860; 15 answers, 38 UDP snapshots
+  room 3 (PIN 561204): finished; winner r3-p4 with 1922; 15 answers, 31 UDP snapshots

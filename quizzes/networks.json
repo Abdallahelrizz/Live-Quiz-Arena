@@ -1,0 +1,41 @@
+{
+  "title": "Computer Networks Basics",
+  "questions": [
+    {
+      "text": "Which transport protocol sets up a connection before sending data?",
+      "choices": ["TCP", "UDP", "IP", "ARP"],
+      "correct": 0,
+      "time_seconds": 20
+    },
+    {
+      "text": "Which protocol translates a domain name into an IP address?",
+      "choices": ["DHCP", "DNS", "HTTP", "SMTP"],
+      "correct": 1,
+      "time_seconds": 20
+    },
+    {
+      "text": "How many bits are in an IPv4 address?",
+      "choices": ["16", "32", "64", "128"],
+      "correct": 1,
+      "time_seconds": 15
+    },
+    {
+      "text": "UDP guarantees that datagrams arrive in order.",
+      "choices": ["True", "False"],
+      "correct": 1,
+      "time_seconds": 10
+    },
+    {
+      "text": "Which layer of the Internet protocol stack does HTTP belong to?",
+      "choices": ["Link", "Network", "Transport", "Application"],
+      "correct": 3,
+      "time_seconds": 15
+    },
+    {
+      "text": "Which of these is a private IPv4 address?",
+      "choices": ["8.8.8.8", "172.217.0.1", "192.168.1.10", "1.1.1.1", "200.10.10.10", "151.101.1.69"],
+      "correct": 2,
+      "time_seconds": 20
+    }
+  ]
+}

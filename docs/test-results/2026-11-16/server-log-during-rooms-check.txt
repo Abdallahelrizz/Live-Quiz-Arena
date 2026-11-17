@@ -1,0 +1,1149 @@
+Fat-Rat game server
+  Server IPv4 address : 127.0.0.1
+  TCP port 43000 on all interfaces, UDP port 43001 on 127.0.0.1
+  Wireshark filter    : tcp.port == 43000 || udp.port == 43001
+  Press Ctrl+C to stop.
+
+00:00:28 127.0.0.1:64308 connected
+00:00:28 127.0.0.1:64309 connected
+00:00:28 127.0.0.1:64308 disconnected
+00:00:28 127.0.0.1:64309 CREATE_ROOM -> 'limits-host' created room 556963
+00:00:28 127.0.0.1:64309 PUT_QUIZ -> room 556963 host 'limits-host': quiz loaded (30 questions)
+00:00:28 127.0.0.1:64309 PUT_QUIZ -> room 556963 host 'limits-host': INVALID_QUIZ
+00:00:28 127.0.0.1:64309 PUT_QUIZ -> room 556963 host 'limits-host': INVALID_QUIZ
+00:00:28 127.0.0.1:64309 PUT_QUIZ -> room 556963 host 'limits-host': INVALID_QUIZ
+00:00:28 127.0.0.1:64309 PUT_QUIZ -> room 556963 host 'limits-host': INVALID_QUIZ
+00:00:28 127.0.0.1:64310 connected
+00:00:28 127.0.0.1:64311 connected
+00:00:28 127.0.0.1:64310 JOIN_ROOM -> room 556963: 'جججججججججججججججججججججججججججججججج' joined (1/50)
+00:00:28 127.0.0.1:64311 JOIN_ROOM -> room 556963: INVALID_USERNAME
+00:00:28 127.0.0.1:64309 disconnected
+00:00:28 127.0.0.1:64310 disconnected
+00:00:28 room 556963 host 'limits-host' disconnected (identity kept)
+00:00:28 127.0.0.1:64311 disconnected
+00:00:28 room 556963 player 'جججججججججججججججججججججججججججججججج' disconnected (identity kept)
+00:00:28 127.0.0.1:64312 connected
+00:00:28 127.0.0.1:64312 CREATE_ROOM -> 'cap-host' created room 334175
+00:00:28 127.0.0.1:64313 connected
+00:00:28 127.0.0.1:64313 CREATE_ROOM -> HOST_HAS_ROOM (room 334175)
+00:00:28 127.0.0.1:64313 disconnected
+00:00:28 127.0.0.1:64312 START_QUIZ -> room 334175 host 'cap-host': INVALID_STATE
+00:00:28 127.0.0.1:64312 PUT_QUIZ -> room 334175 host 'cap-host': INVALID_QUIZ
+00:00:28 127.0.0.1:64312 PUT_QUIZ -> room 334175 host 'cap-host': quiz loaded (1 questions)
+00:00:28 127.0.0.1:64314 connected
+00:00:28 127.0.0.1:64315 connected
+00:00:28 127.0.0.1:64316 connected
+00:00:28 127.0.0.1:64317 connected
+00:00:28 127.0.0.1:64314 JOIN_ROOM -> room 334175: 'cap-01' joined (1/50)
+00:00:28 127.0.0.1:64316 JOIN_ROOM -> room 334175: 'cap-03' joined (2/50)
+00:00:28 127.0.0.1:64315 JOIN_ROOM -> room 334175: 'cap-02' joined (3/50)
+00:00:28 127.0.0.1:64317 JOIN_ROOM -> room 334175: 'cap-04' joined (4/50)
+00:00:28 127.0.0.1:64312 START_QUIZ -> room 334175 host 'cap-host': NOT_ENOUGH_PLAYERS
+00:00:28 127.0.0.1:64318 connected
+00:00:28 127.0.0.1:64319 connected
+00:00:28 127.0.0.1:64320 connected
+00:00:28 127.0.0.1:64321 connected
+00:00:28 127.0.0.1:64322 connected
+00:00:28 127.0.0.1:64323 connected
+00:00:28 127.0.0.1:64324 connected
+00:00:28 127.0.0.1:64325 connected
+00:00:28 127.0.0.1:64326 connected
+00:00:28 127.0.0.1:64327 connected
+00:00:28 127.0.0.1:64328 connected
+00:00:28 127.0.0.1:64329 connected
+00:00:28 127.0.0.1:64330 connected
+00:00:28 127.0.0.1:64331 connected
+00:00:28 127.0.0.1:64332 connected
+00:00:28 127.0.0.1:64333 connected
+00:00:28 127.0.0.1:64334 connected
+00:00:28 127.0.0.1:64335 connected
+00:00:28 127.0.0.1:64336 connected
+00:00:28 127.0.0.1:64337 connected
+00:00:28 127.0.0.1:64339 connected
+00:00:28 127.0.0.1:64340 connected
+00:00:28 127.0.0.1:64341 connected
+00:00:28 127.0.0.1:64342 connected
+00:00:28 127.0.0.1:64343 connected
+00:00:28 127.0.0.1:64344 connected
+00:00:28 127.0.0.1:64345 connected
+00:00:28 127.0.0.1:64346 connected
+00:00:28 127.0.0.1:64347 connected
+00:00:28 127.0.0.1:64348 connected
+00:00:28 127.0.0.1:64349 connected
+00:00:28 127.0.0.1:64351 connected
+00:00:28 127.0.0.1:64350 connected
+00:00:28 127.0.0.1:64352 connected
+00:00:28 127.0.0.1:64353 connected
+00:00:28 127.0.0.1:64354 connected
+00:00:28 127.0.0.1:64355 connected
+00:00:28 127.0.0.1:64356 connected
+00:00:28 127.0.0.1:64357 connected
+00:00:28 127.0.0.1:64358 connected
+00:00:28 127.0.0.1:64359 connected
+00:00:28 127.0.0.1:64360 connected
+00:00:28 127.0.0.1:64361 connected
+00:00:28 127.0.0.1:64362 connected
+00:00:28 127.0.0.1:64363 connected
+00:00:28 127.0.0.1:64364 connected
+00:00:28 127.0.0.1:64318 JOIN_ROOM -> room 334175: 'cap-05' joined (5/50)
+00:00:28 127.0.0.1:64320 JOIN_ROOM -> room 334175: 'cap-07' joined (6/50)
+00:00:28 127.0.0.1:64322 JOIN_ROOM -> room 334175: 'cap-09' joined (7/50)
+00:00:28 127.0.0.1:64321 JOIN_ROOM -> room 334175: 'cap-08' joined (8/50)
+00:00:28 127.0.0.1:64323 JOIN_ROOM -> room 334175: 'cap-10' joined (9/50)
+00:00:28 127.0.0.1:64319 JOIN_ROOM -> room 334175: 'cap-06' joined (10/50)
+00:00:28 127.0.0.1:64324 JOIN_ROOM -> room 334175: 'cap-11' joined (11/50)
+00:00:28 127.0.0.1:64325 JOIN_ROOM -> room 334175: 'cap-12' joined (12/50)
+00:00:28 127.0.0.1:64326 JOIN_ROOM -> room 334175: 'cap-13' joined (13/50)
+00:00:28 127.0.0.1:64328 JOIN_ROOM -> room 334175: 'cap-15' joined (14/50)
+00:00:28 127.0.0.1:64330 JOIN_ROOM -> room 334175: 'cap-17' joined (15/50)
+00:00:28 127.0.0.1:64327 JOIN_ROOM -> room 334175: 'cap-14' joined (16/50)
+00:00:28 127.0.0.1:64332 JOIN_ROOM -> room 334175: 'cap-19' joined (17/50)
+00:00:28 127.0.0.1:64331 JOIN_ROOM -> room 334175: 'cap-18' joined (18/50)
+00:00:28 127.0.0.1:64329 JOIN_ROOM -> room 334175: 'cap-16' joined (19/50)
+00:00:28 127.0.0.1:64335 JOIN_ROOM -> room 334175: 'cap-22' joined (20/50)
+00:00:28 127.0.0.1:64337 JOIN_ROOM -> room 334175: 'cap-24' joined (21/50)
+00:00:28 127.0.0.1:64336 JOIN_ROOM -> room 334175: 'cap-23' joined (22/50)
+00:00:28 127.0.0.1:64334 JOIN_ROOM -> room 334175: 'cap-21' joined (23/50)
+00:00:28 127.0.0.1:64340 JOIN_ROOM -> room 334175: 'cap-26' joined (24/50)
+00:00:28 127.0.0.1:64339 JOIN_ROOM -> room 334175: 'cap-25' joined (25/50)
+00:00:28 127.0.0.1:64333 JOIN_ROOM -> room 334175: 'cap-20' joined (26/50)
+00:00:28 127.0.0.1:64341 JOIN_ROOM -> room 334175: 'cap-27' joined (27/50)
+00:00:28 127.0.0.1:64343 JOIN_ROOM -> room 334175: 'cap-29' joined (28/50)
+00:00:28 127.0.0.1:64345 JOIN_ROOM -> room 334175: 'cap-31' joined (29/50)
+00:00:28 127.0.0.1:64344 JOIN_ROOM -> room 334175: 'cap-30' joined (30/50)
+00:00:28 127.0.0.1:64342 JOIN_ROOM -> room 334175: 'cap-28' joined (31/50)
+00:00:28 127.0.0.1:64346 JOIN_ROOM -> room 334175: 'cap-32' joined (32/50)
+00:00:28 127.0.0.1:64347 JOIN_ROOM -> room 334175: 'cap-33' joined (33/50)
+00:00:28 127.0.0.1:64348 JOIN_ROOM -> room 334175: 'cap-34' joined (34/50)
+00:00:28 127.0.0.1:64349 JOIN_ROOM -> room 334175: 'cap-35' joined (35/50)
+00:00:28 127.0.0.1:64350 JOIN_ROOM -> room 334175: 'cap-36' joined (36/50)
+00:00:28 127.0.0.1:64351 JOIN_ROOM -> room 334175: 'cap-37' joined (37/50)
+00:00:28 127.0.0.1:64352 JOIN_ROOM -> room 334175: 'cap-38' joined (38/50)
+00:00:28 127.0.0.1:64353 JOIN_ROOM -> room 334175: 'cap-39' joined (39/50)
+00:00:28 127.0.0.1:64357 JOIN_ROOM -> room 334175: 'cap-43' joined (40/50)
+00:00:28 127.0.0.1:64356 JOIN_ROOM -> room 334175: 'cap-42' joined (41/50)
+00:00:28 127.0.0.1:64358 JOIN_ROOM -> room 334175: 'cap-44' joined (42/50)
+00:00:28 127.0.0.1:64354 JOIN_ROOM -> room 334175: 'cap-40' joined (43/50)
+00:00:28 127.0.0.1:64355 JOIN_ROOM -> room 334175: 'cap-41' joined (44/50)
+00:00:28 127.0.0.1:64359 JOIN_ROOM -> room 334175: 'cap-45' joined (45/50)
+00:00:28 127.0.0.1:64360 JOIN_ROOM -> room 334175: 'cap-46' joined (46/50)
+00:00:28 127.0.0.1:64361 JOIN_ROOM -> room 334175: 'cap-47' joined (47/50)
+00:00:28 127.0.0.1:64362 JOIN_ROOM -> room 334175: 'cap-48' joined (48/50)
+00:00:28 127.0.0.1:64364 JOIN_ROOM -> room 334175: 'cap-50' joined (49/50)
+00:00:28 127.0.0.1:64363 JOIN_ROOM -> room 334175: 'cap-49' joined (50/50)
+00:00:28 127.0.0.1:64365 connected
+00:00:28 127.0.0.1:64365 JOIN_ROOM -> room 334175: ROOM_FULL
+00:00:28 127.0.0.1:64314 disconnected
+00:00:28 room 334175 player 'cap-01' disconnected (identity kept)
+00:00:28 127.0.0.1:64365 JOIN_ROOM -> room 334175: ROOM_FULL
+00:00:28 127.0.0.1:64315 LEAVE_ROOM -> room 334175 player 'cap-02': LEFT (49/50 active)
+00:00:28 127.0.0.1:64366 connected
+00:00:28 127.0.0.1:64366 JOIN_ROOM -> room 334175: NAME_TAKEN
+00:00:28 127.0.0.1:64365 JOIN_ROOM -> room 334175: 'cap-51' joined (50/50)
+00:00:28 127.0.0.1:64316 LEAVE_ROOM -> room 334175 player 'cap-03': LEFT (49/50 active)
+00:00:28 127.0.0.1:64367 connected
+00:00:28 127.0.0.1:64368 connected
+00:00:28 127.0.0.1:64369 connected
+00:00:28 127.0.0.1:64369 JOIN_ROOM -> room 334175: 'cap-race-3' joined (50/50)
+00:00:28 127.0.0.1:64368 JOIN_ROOM -> room 334175: ROOM_FULL
+00:00:28 127.0.0.1:64367 JOIN_ROOM -> room 334175: ROOM_FULL
+00:00:28 127.0.0.1:64312 START_QUIZ -> room 334175 host 'cap-host': question 1 OPEN for 50 players
+00:00:28 127.0.0.1:64317 SUBMIT_ANSWER -> room 334175 player 'cap-04': accepted (29981 ms left)
+00:00:28 127.0.0.1:64318 SUBMIT_ANSWER -> room 334175 player 'cap-05': accepted (29981 ms left)
+00:00:28 127.0.0.1:64319 SUBMIT_ANSWER -> room 334175 player 'cap-06': accepted (29981 ms left)
+00:00:28 127.0.0.1:64320 SUBMIT_ANSWER -> room 334175 player 'cap-07': accepted (29980 ms left)
+00:00:28 127.0.0.1:64321 SUBMIT_ANSWER -> room 334175 player 'cap-08': accepted (29980 ms left)
+00:00:28 127.0.0.1:64322 SUBMIT_ANSWER -> room 334175 player 'cap-09': accepted (29980 ms left)
+00:00:28 127.0.0.1:64323 SUBMIT_ANSWER -> room 334175 player 'cap-10': accepted (29980 ms left)
+00:00:28 127.0.0.1:64324 SUBMIT_ANSWER -> room 334175 player 'cap-11': accepted (29980 ms left)
+00:00:28 127.0.0.1:64325 SUBMIT_ANSWER -> room 334175 player 'cap-12': accepted (29980 ms left)
+00:00:28 127.0.0.1:64326 SUBMIT_ANSWER -> room 334175 player 'cap-13': accepted (29980 ms left)
+00:00:28 127.0.0.1:64327 SUBMIT_ANSWER -> room 334175 player 'cap-14': accepted (29980 ms left)
+00:00:28 127.0.0.1:64328 SUBMIT_ANSWER -> room 334175 player 'cap-15': accepted (29979 ms left)
+00:00:28 127.0.0.1:64329 SUBMIT_ANSWER -> room 334175 player 'cap-16': accepted (29979 ms left)
+00:00:28 127.0.0.1:64330 SUBMIT_ANSWER -> room 334175 player 'cap-17': accepted (29979 ms left)
+00:00:28 127.0.0.1:64331 SUBMIT_ANSWER -> room 334175 player 'cap-18': accepted (29979 ms left)
+00:00:28 127.0.0.1:64332 SUBMIT_ANSWER -> room 334175 player 'cap-19': accepted (29979 ms left)
+00:00:28 127.0.0.1:64334 SUBMIT_ANSWER -> room 334175 player 'cap-21': accepted (29979 ms left)
+00:00:28 127.0.0.1:64333 SUBMIT_ANSWER -> room 334175 player 'cap-20': accepted (29979 ms left)
+00:00:28 127.0.0.1:64336 SUBMIT_ANSWER -> room 334175 player 'cap-23': accepted (29979 ms left)
+00:00:28 127.0.0.1:64335 SUBMIT_ANSWER -> room 334175 player 'cap-22': accepted (29979 ms left)
+00:00:28 127.0.0.1:64337 SUBMIT_ANSWER -> room 334175 player 'cap-24': accepted (29978 ms left)
+00:00:28 127.0.0.1:64339 SUBMIT_ANSWER -> room 334175 player 'cap-25': accepted (29978 ms left)
+00:00:28 127.0.0.1:64340 SUBMIT_ANSWER -> room 334175 player 'cap-26': accepted (29978 ms left)
+00:00:28 127.0.0.1:64342 SUBMIT_ANSWER -> room 334175 player 'cap-28': accepted (29978 ms left)
+00:00:28 127.0.0.1:64343 SUBMIT_ANSWER -> room 334175 player 'cap-29': accepted (29978 ms left)
+00:00:28 127.0.0.1:64341 SUBMIT_ANSWER -> room 334175 player 'cap-27': accepted (29978 ms left)
+00:00:28 127.0.0.1:64344 SUBMIT_ANSWER -> room 334175 player 'cap-30': accepted (29978 ms left)
+00:00:28 127.0.0.1:64345 SUBMIT_ANSWER -> room 334175 player 'cap-31': accepted (29978 ms left)
+00:00:28 127.0.0.1:64346 SUBMIT_ANSWER -> room 334175 player 'cap-32': accepted (29978 ms left)
+00:00:28 127.0.0.1:64348 SUBMIT_ANSWER -> room 334175 player 'cap-34': accepted (29977 ms left)
+00:00:28 127.0.0.1:64350 SUBMIT_ANSWER -> room 334175 player 'cap-36': accepted (29977 ms left)
+00:00:28 127.0.0.1:64347 SUBMIT_ANSWER -> room 334175 player 'cap-33': accepted (29977 ms left)
+00:00:28 127.0.0.1:64349 SUBMIT_ANSWER -> room 334175 player 'cap-35': accepted (29977 ms left)
+00:00:28 127.0.0.1:64352 SUBMIT_ANSWER -> room 334175 player 'cap-38': accepted (29977 ms left)
+00:00:28 127.0.0.1:64353 SUBMIT_ANSWER -> room 334175 player 'cap-39': accepted (29977 ms left)
+00:00:28 127.0.0.1:64354 SUBMIT_ANSWER -> room 334175 player 'cap-40': accepted (29977 ms left)
+00:00:28 127.0.0.1:64351 SUBMIT_ANSWER -> room 334175 player 'cap-37': accepted (29977 ms left)
+00:00:28 127.0.0.1:64357 SUBMIT_ANSWER -> room 334175 player 'cap-43': accepted (29977 ms left)
+00:00:28 127.0.0.1:64356 SUBMIT_ANSWER -> room 334175 player 'cap-42': accepted (29977 ms left)
+00:00:28 127.0.0.1:64355 SUBMIT_ANSWER -> room 334175 player 'cap-41': accepted (29976 ms left)
+00:00:28 127.0.0.1:64358 SUBMIT_ANSWER -> room 334175 player 'cap-44': accepted (29976 ms left)
+00:00:28 127.0.0.1:64360 SUBMIT_ANSWER -> room 334175 player 'cap-46': accepted (29976 ms left)
+00:00:28 127.0.0.1:64359 SUBMIT_ANSWER -> room 334175 player 'cap-45': accepted (29976 ms left)
+00:00:28 127.0.0.1:64362 SUBMIT_ANSWER -> room 334175 player 'cap-48': accepted (29976 ms left)
+00:00:28 127.0.0.1:64363 SUBMIT_ANSWER -> room 334175 player 'cap-49': accepted (29976 ms left)
+00:00:28 127.0.0.1:64361 SUBMIT_ANSWER -> room 334175 player 'cap-47': accepted (29976 ms left)
+00:00:28 127.0.0.1:64364 SUBMIT_ANSWER -> room 334175 player 'cap-50': accepted (29976 ms left)
+00:00:28 127.0.0.1:64369 SUBMIT_ANSWER -> room 334175 player 'cap-race-3': accepted (29975 ms left)
+00:00:28 127.0.0.1:64365 SUBMIT_ANSWER -> room 334175 player 'cap-51': accepted (29975 ms left)
+00:00:28 127.0.0.1:64312 GET_STATE -> room 334175 host 'cap-host': RESULT + STATE
+00:00:28 room 334175 question 1 closed (HOST_CLOSED), 49 answers -> RESULTS
+00:00:28 127.0.0.1:64312 CLOSE_QUESTION -> room 334175 host 'cap-host': closed by host
+00:00:28 room 334175 finished; its host may create a new room
+00:00:28 127.0.0.1:64312 NEXT_QUESTION -> room 334175 host 'cap-host': FINISHED (COMPLETED)
+00:00:28 127.0.0.1:64370 connected
+00:00:28 127.0.0.1:64370 JOIN_ROOM -> room 334175: ROOM_FINISHED
+00:00:28 127.0.0.1:64371 connected
+00:00:28 127.0.0.1:64371 CREATE_ROOM -> 'cap-host' created room 469408
+00:00:28 127.0.0.1:64312 disconnected
+00:00:28 room 334175 host 'cap-host' disconnected (identity kept)
+00:00:28 127.0.0.1:64317 disconnected
+00:00:28 127.0.0.1:64319 disconnected
+00:00:28 127.0.0.1:64320 disconnected
+00:00:28 room 334175 player 'cap-07' disconnected (identity kept)
+00:00:28 127.0.0.1:64325 disconnected
+00:00:28 room 334175 player 'cap-12' disconnected (identity kept)
+00:00:28 127.0.0.1:64331 disconnected
+00:00:28 room 334175 player 'cap-18' disconnected (identity kept)
+00:00:28 127.0.0.1:64336 disconnected
+00:00:28 127.0.0.1:64337 disconnected
+00:00:28 127.0.0.1:64343 disconnected
+00:00:28 room 334175 player 'cap-29' disconnected (identity kept)
+00:00:28 127.0.0.1:64344 disconnected
+00:00:28 127.0.0.1:64346 disconnected
+00:00:28 127.0.0.1:64348 disconnected
+00:00:28 room 334175 player 'cap-34' disconnected (identity kept)
+00:00:28 127.0.0.1:64353 disconnected
+00:00:28 127.0.0.1:64355 disconnected
+00:00:28 room 334175 player 'cap-41' disconnected (identity kept)
+00:00:28 127.0.0.1:64361 disconnected
+00:00:28 room 334175 player 'cap-47' disconnected (identity kept)
+00:00:28 127.0.0.1:64366 disconnected
+00:00:28 127.0.0.1:64367 disconnected
+00:00:28 127.0.0.1:64369 disconnected
+00:00:28 room 334175 player 'cap-race-3' disconnected (identity kept)
+00:00:28 127.0.0.1:64321 disconnected
+00:00:28 127.0.0.1:64326 disconnected
+00:00:28 room 334175 player 'cap-13' disconnected (identity kept)
+00:00:28 127.0.0.1:64330 disconnected
+00:00:28 127.0.0.1:64334 disconnected
+00:00:28 room 334175 player 'cap-21' disconnected (identity kept)
+00:00:28 127.0.0.1:64341 disconnected
+00:00:28 127.0.0.1:64335 disconnected
+00:00:28 room 334175 player 'cap-22' disconnected (identity kept)
+00:00:28 127.0.0.1:64350 disconnected
+00:00:28 room 334175 player 'cap-36' disconnected (identity kept)
+00:00:28 127.0.0.1:64351 disconnected
+00:00:28 room 334175 player 'cap-37' disconnected (identity kept)
+00:00:28 127.0.0.1:64357 disconnected
+00:00:28 room 334175 player 'cap-43' disconnected (identity kept)
+00:00:28 127.0.0.1:64364 disconnected
+00:00:28 room 334175 player 'cap-50' disconnected (identity kept)
+00:00:28 127.0.0.1:64368 disconnected
+00:00:28 room 334175 player 'cap-04' disconnected (identity kept)
+00:00:28 127.0.0.1:64318 disconnected
+00:00:28 room 334175 player 'cap-05' disconnected (identity kept)
+00:00:28 127.0.0.1:64328 disconnected
+00:00:28 127.0.0.1:64332 disconnected
+00:00:28 room 334175 player 'cap-19' disconnected (identity kept)
+00:00:28 127.0.0.1:64359 disconnected
+00:00:28 room 334175 player 'cap-45' disconnected (identity kept)
+00:00:28 127.0.0.1:64365 disconnected
+00:00:28 room 334175 player 'cap-51' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-06' disconnected (identity kept)
+00:00:28 127.0.0.1:64347 disconnected
+00:00:28 room 334175 player 'cap-33' disconnected (identity kept)
+00:00:28 127.0.0.1:64374 connected
+00:00:28 127.0.0.1:64340 disconnected
+00:00:28 127.0.0.1:64324 disconnected
+00:00:28 127.0.0.1:64323 disconnected
+00:00:28 room 334175 player 'cap-10' disconnected (identity kept)
+00:00:28 127.0.0.1:64333 disconnected
+00:00:28 room 334175 player 'cap-20' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-24' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-30' disconnected (identity kept)
+00:00:28 127.0.0.1:64345 disconnected
+00:00:28 room 334175 player 'cap-32' disconnected (identity kept)
+00:00:28 127.0.0.1:64349 disconnected
+00:00:28 room 334175 player 'cap-35' disconnected (identity kept)
+00:00:28 127.0.0.1:64360 disconnected
+00:00:28 room 334175 player 'cap-46' disconnected (identity kept)
+00:00:28 127.0.0.1:64370 disconnected
+00:00:28 room 334175 player 'cap-08' disconnected (identity kept)
+00:00:28 127.0.0.1:64329 disconnected
+00:00:28 room 334175 player 'cap-17' disconnected (identity kept)
+00:00:28 127.0.0.1:64339 disconnected
+00:00:28 room 334175 player 'cap-25' disconnected (identity kept)
+00:00:28 127.0.0.1:64342 disconnected
+00:00:28 room 334175 player 'cap-28' disconnected (identity kept)
+00:00:28 127.0.0.1:64356 disconnected
+00:00:28 room 334175 player 'cap-42' disconnected (identity kept)
+00:00:28 127.0.0.1:64371 disconnected
+00:00:28 127.0.0.1:64322 disconnected
+00:00:28 room 334175 player 'cap-09' disconnected (identity kept)
+00:00:28 127.0.0.1:64354 disconnected
+00:00:28 room 334175 player 'cap-40' disconnected (identity kept)
+00:00:28 127.0.0.1:64373 connected
+00:00:28 127.0.0.1:64372 connected
+00:00:28 room 334175 player 'cap-26' disconnected (identity kept)
+00:00:28 127.0.0.1:64374 CREATE_ROOM -> 'host-3' created room 210149
+00:00:28 room 334175 player 'cap-11' disconnected (identity kept)
+00:00:28 127.0.0.1:64327 disconnected
+00:00:28 room 334175 player 'cap-23' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-31' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-39' disconnected (identity kept)
+00:00:28 127.0.0.1:64363 disconnected
+00:00:28 room 334175 player 'cap-49' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-27' disconnected (identity kept)
+00:00:28 127.0.0.1:64352 disconnected
+00:00:28 127.0.0.1:64358 disconnected
+00:00:28 room 334175 player 'cap-44' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-15' disconnected (identity kept)
+00:00:28 127.0.0.1:64362 disconnected
+00:00:28 room 334175 player 'cap-48' disconnected (identity kept)
+00:00:28 127.0.0.1:64373 CREATE_ROOM -> 'host-2' created room 988568
+00:00:28 room 334175 player 'cap-14' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-16' disconnected (identity kept)
+00:00:28 room 334175 player 'cap-38' disconnected (identity kept)
+00:00:28 room 469408 host 'cap-host' disconnected (identity kept)
+00:00:28 127.0.0.1:64372 CREATE_ROOM -> 'host-1' created room 746388
+00:00:28 127.0.0.1:64372 PUT_QUIZ -> room 746388 host 'host-1': quiz loaded (2 questions)
+00:00:28 127.0.0.1:64373 PUT_QUIZ -> room 988568 host 'host-2': quiz loaded (2 questions)
+00:00:28 127.0.0.1:64374 PUT_QUIZ -> room 210149 host 'host-3': quiz loaded (2 questions)
+00:00:28 127.0.0.1:64375 connected
+00:00:28 127.0.0.1:64376 connected
+00:00:28 127.0.0.1:64377 connected
+00:00:28 127.0.0.1:64378 connected
+00:00:28 127.0.0.1:64379 connected
+00:00:28 127.0.0.1:64380 connected
+00:00:28 127.0.0.1:64381 connected
+00:00:28 127.0.0.1:64382 connected
+00:00:28 127.0.0.1:64383 connected
+00:00:28 127.0.0.1:64384 connected
+00:00:28 127.0.0.1:64385 connected
+00:00:28 127.0.0.1:64386 connected
+00:00:28 127.0.0.1:64387 connected
+00:00:28 127.0.0.1:64388 connected
+00:00:28 127.0.0.1:64389 connected
+00:00:28 127.0.0.1:64375 JOIN_ROOM -> room 746388: 'rat' joined (1/50)
+00:00:28 127.0.0.1:64376 JOIN_ROOM -> room 746388: 'r1-p2' joined (2/50)
+00:00:28 127.0.0.1:64377 JOIN_ROOM -> room 746388: 'r1-p3' joined (3/50)
+00:00:28 127.0.0.1:64382 JOIN_ROOM -> room 988568: 'r2-p3' joined (1/50)
+00:00:28 127.0.0.1:64379 JOIN_ROOM -> room 746388: 'r1-p5' joined (4/50)
+00:00:28 127.0.0.1:64383 JOIN_ROOM -> room 988568: 'r2-p4' joined (2/50)
+00:00:28 127.0.0.1:64387 JOIN_ROOM -> room 210149: 'r3-p3' joined (1/50)
+00:00:28 127.0.0.1:64381 JOIN_ROOM -> room 988568: 'r2-p2' joined (3/50)
+00:00:28 127.0.0.1:64378 JOIN_ROOM -> room 746388: 'r1-p4' joined (5/50)
+00:00:28 127.0.0.1:64380 JOIN_ROOM -> room 988568: 'rat' joined (4/50)
+00:00:28 127.0.0.1:64386 JOIN_ROOM -> room 210149: 'r3-p2' joined (2/50)
+00:00:28 127.0.0.1:64384 JOIN_ROOM -> room 988568: 'r2-p5' joined (5/50)
+00:00:28 127.0.0.1:64385 JOIN_ROOM -> room 210149: 'rat' joined (3/50)
+00:00:28 127.0.0.1:64389 JOIN_ROOM -> room 210149: 'r3-p5' joined (4/50)
+00:00:28 127.0.0.1:64388 JOIN_ROOM -> room 210149: 'r3-p4' joined (5/50)
+00:00:28 127.0.0.1:64375 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64376 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64378 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64377 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64379 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1 UDP_HELLO from port 59016 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1:64380 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64381 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64382 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64383 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64384 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1 UDP_HELLO from port 59235 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 57771 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1:64386 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1:64385 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1 UDP_HELLO from port 61086 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1:64388 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1 UDP_HELLO from port 50940 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1:64387 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1 UDP_HELLO from port 61446 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 58766 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1:64389 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:28 127.0.0.1 UDP_HELLO from port 60840 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 58325 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 50188 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 53258 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 63888 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 57184 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 62726 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1 UDP_HELLO from port 63262 verified -> UDP_BOUND over TCP
+00:00:28 127.0.0.1:64372 START_QUIZ -> room 746388 host 'host-1': question 1 OPEN for 5 players
+00:00:28 127.0.0.1:64374 START_QUIZ -> room 210149 host 'host-3': question 1 OPEN for 5 players
+00:00:28 127.0.0.1:64373 START_QUIZ -> room 988568 host 'host-2': question 1 OPEN for 5 players
+00:00:30 127.0.0.1:64376 SUBMIT_ANSWER -> room 746388 player 'r1-p2': accepted (4492 ms left)
+00:00:30 127.0.0.1:64375 SUBMIT_ANSWER -> room 746388 player 'rat': accepted (4492 ms left)
+00:00:30 127.0.0.1:64377 SUBMIT_ANSWER -> room 746388 player 'r1-p3': accepted (4491 ms left)
+00:00:30 127.0.0.1:64378 SUBMIT_ANSWER -> room 746388 player 'r1-p4': accepted (4491 ms left)
+00:00:30 127.0.0.1:64380 SUBMIT_ANSWER -> room 988568 player 'rat': accepted (4492 ms left)
+00:00:30 room 746388 question 1 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:30 127.0.0.1:64381 SUBMIT_ANSWER -> room 988568 player 'r2-p2': accepted (4492 ms left)
+00:00:30 127.0.0.1:64382 SUBMIT_ANSWER -> room 988568 player 'r2-p3': accepted (4491 ms left)
+00:00:30 127.0.0.1:64384 SUBMIT_ANSWER -> room 988568 player 'r2-p5': accepted (4491 ms left)
+00:00:30 room 988568 question 1 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:30 127.0.0.1:64388 SUBMIT_ANSWER -> room 210149 player 'r3-p4': accepted (4490 ms left)
+00:00:30 127.0.0.1:64385 SUBMIT_ANSWER -> room 210149 player 'rat': accepted (4489 ms left)
+00:00:30 127.0.0.1:64386 SUBMIT_ANSWER -> room 210149 player 'r3-p2': accepted (4489 ms left)
+00:00:30 127.0.0.1:64379 SUBMIT_ANSWER -> room 746388 player 'r1-p5': accepted (4491 ms left)
+00:00:30 127.0.0.1:64387 SUBMIT_ANSWER -> room 210149 player 'r3-p3': accepted (4489 ms left)
+00:00:30 room 210149 question 1 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:30 127.0.0.1:64383 SUBMIT_ANSWER -> room 988568 player 'r2-p4': accepted (4491 ms left)
+00:00:30 127.0.0.1:64389 SUBMIT_ANSWER -> room 210149 player 'r3-p5': accepted (4488 ms left)
+00:00:30 127.0.0.1:64372 NEXT_QUESTION -> room 746388 host 'host-1': question 2 OPEN
+00:00:30 127.0.0.1:64373 NEXT_QUESTION -> room 988568 host 'host-2': question 2 OPEN
+00:00:30 127.0.0.1:64374 NEXT_QUESTION -> room 210149 host 'host-3': question 2 OPEN
+00:00:30 127.0.0.1:64380 SUBMIT_ANSWER -> room 988568 player 'rat': accepted (5995 ms left)
+00:00:30 127.0.0.1:64381 SUBMIT_ANSWER -> room 988568 player 'r2-p2': accepted (5994 ms left)
+00:00:30 127.0.0.1:64382 SUBMIT_ANSWER -> room 988568 player 'r2-p3': accepted (5994 ms left)
+00:00:30 127.0.0.1:64384 SUBMIT_ANSWER -> room 988568 player 'r2-p5': accepted (5994 ms left)
+00:00:30 room 988568 question 2 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:30 127.0.0.1:64383 SUBMIT_ANSWER -> room 988568 player 'r2-p4': accepted (5994 ms left)
+00:00:30 127.0.0.1:64385 SUBMIT_ANSWER -> room 210149 player 'rat': accepted (5995 ms left)
+00:00:30 127.0.0.1:64387 SUBMIT_ANSWER -> room 210149 player 'r3-p3': accepted (5994 ms left)
+00:00:30 127.0.0.1:64386 SUBMIT_ANSWER -> room 210149 player 'r3-p2': accepted (5994 ms left)
+00:00:30 127.0.0.1:64388 SUBMIT_ANSWER -> room 210149 player 'r3-p4': accepted (5994 ms left)
+00:00:30 room 210149 question 2 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:30 127.0.0.1:64389 SUBMIT_ANSWER -> room 210149 player 'r3-p5': accepted (5994 ms left)
+00:00:36 room 746388 question 2 closed (TIMEOUT), 0 answers -> RESULTS
+00:00:36 room 988568 finished; its host may create a new room
+00:00:36 127.0.0.1:64373 NEXT_QUESTION -> room 988568 host 'host-2': FINISHED (COMPLETED)
+00:00:36 room 746388 finished; its host may create a new room
+00:00:36 127.0.0.1:64372 NEXT_QUESTION -> room 746388 host 'host-1': FINISHED (COMPLETED)
+00:00:36 room 210149 finished; its host may create a new room
+00:00:36 127.0.0.1:64374 NEXT_QUESTION -> room 210149 host 'host-3': FINISHED (COMPLETED)
+00:00:36 127.0.0.1:64372 disconnected
+00:00:36 127.0.0.1:64373 disconnected
+00:00:36 room 746388 host 'host-1' disconnected (identity kept)
+00:00:36 127.0.0.1:64381 disconnected
+00:00:36 room 988568 host 'host-2' disconnected (identity kept)
+00:00:36 127.0.0.1:64377 disconnected
+00:00:36 127.0.0.1:64378 disconnected
+00:00:36 127.0.0.1:64380 disconnected
+00:00:36 127.0.0.1:64374 disconnected
+00:00:36 127.0.0.1:64376 disconnected
+00:00:36 127.0.0.1:64383 disconnected
+00:00:36 127.0.0.1:64385 disconnected
+00:00:36 127.0.0.1:64388 disconnected
+00:00:36 127.0.0.1:64389 disconnected
+00:00:36 127.0.0.1:64375 disconnected
+00:00:36 127.0.0.1:64384 disconnected
+00:00:36 127.0.0.1:64386 disconnected
+00:00:36 127.0.0.1:64387 disconnected
+00:00:36 127.0.0.1:64379 disconnected
+00:00:36 127.0.0.1:64382 disconnected
+00:00:36 room 988568 player 'r2-p2' disconnected (identity kept)
+00:00:36 room 746388 player 'r1-p3' disconnected (identity kept)
+00:00:36 room 746388 player 'r1-p4' disconnected (identity kept)
+00:00:36 room 988568 player 'rat' disconnected (identity kept)
+00:00:36 room 210149 host 'host-3' disconnected (identity kept)
+00:00:36 room 746388 player 'r1-p2' disconnected (identity kept)
+00:00:36 room 988568 player 'r2-p4' disconnected (identity kept)
+00:00:36 room 210149 player 'rat' disconnected (identity kept)
+00:00:36 room 210149 player 'r3-p4' disconnected (identity kept)
+00:00:36 room 210149 player 'r3-p5' disconnected (identity kept)
+00:00:36 room 746388 player 'rat' disconnected (identity kept)
+00:00:36 room 988568 player 'r2-p5' disconnected (identity kept)
+00:00:36 room 210149 player 'r3-p2' disconnected (identity kept)
+00:00:36 room 210149 player 'r3-p3' disconnected (identity kept)
+00:00:36 room 746388 player 'r1-p5' disconnected (identity kept)
+00:00:36 room 988568 player 'r2-p3' disconnected (identity kept)
+00:00:36 127.0.0.1:64395 connected
+00:00:36 127.0.0.1:64394 connected
+00:00:36 127.0.0.1:64393 connected
+00:00:36 127.0.0.1:64394 CREATE_ROOM -> 'host-2' created room 038245
+00:00:36 127.0.0.1:64395 CREATE_ROOM -> 'host-3' created room 561204
+00:00:36 127.0.0.1:64395 PUT_QUIZ -> room 561204 host 'host-3': quiz loaded (3 questions)
+00:00:36 127.0.0.1:64393 CREATE_ROOM -> 'host-1' created room 113035
+00:00:36 127.0.0.1:64394 PUT_QUIZ -> room 038245 host 'host-2': quiz loaded (3 questions)
+00:00:36 127.0.0.1:64393 PUT_QUIZ -> room 113035 host 'host-1': quiz loaded (3 questions)
+00:00:36 127.0.0.1:64393 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64396 connected
+00:00:36 127.0.0.1:64397 connected
+00:00:36 127.0.0.1:64398 connected
+00:00:36 127.0.0.1:64397 JOIN_ROOM -> room 113035: 'r1-p1' joined (1/50)
+00:00:36 127.0.0.1:64398 JOIN_ROOM -> room 113035: 'r1-p3' joined (2/50)
+00:00:36 127.0.0.1:64399 connected
+00:00:36 127.0.0.1 UDP_HELLO from port 63561 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64400 connected
+00:00:36 127.0.0.1:64399 JOIN_ROOM -> room 113035: 'r1-p4' joined (3/50)
+00:00:36 127.0.0.1:64396 JOIN_ROOM -> room 113035: 'r1-p2' joined (4/50)
+00:00:36 127.0.0.1:64400 JOIN_ROOM -> room 113035: 'r1-p5' joined (5/50)
+00:00:36 127.0.0.1:64398 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64397 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64399 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64396 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1 UDP_HELLO from port 52630 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 53146 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64393 START_QUIZ -> room 113035 host 'host-1': question 1 OPEN for 5 players
+00:00:36 127.0.0.1 UDP_HELLO from port 52912 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64400 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1 UDP_HELLO from port 57243 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 64307 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64395 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64401 connected
+00:00:36 127.0.0.1 UDP_HELLO from port 62605 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64402 connected
+00:00:36 127.0.0.1:64403 connected
+00:00:36 127.0.0.1:64404 connected
+00:00:36 127.0.0.1:64405 connected
+00:00:36 127.0.0.1:64401 JOIN_ROOM -> room 561204: 'r3-p1' joined (1/50)
+00:00:36 127.0.0.1:64403 JOIN_ROOM -> room 561204: 'r3-p3' joined (2/50)
+00:00:36 127.0.0.1:64394 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64406 connected
+00:00:36 127.0.0.1:64402 JOIN_ROOM -> room 561204: 'r3-p2' joined (3/50)
+00:00:36 127.0.0.1:64407 connected
+00:00:36 127.0.0.1:64408 connected
+00:00:36 127.0.0.1:64409 connected
+00:00:36 127.0.0.1:64410 connected
+00:00:36 127.0.0.1:64404 JOIN_ROOM -> room 561204: 'r3-p4' joined (4/50)
+00:00:36 127.0.0.1:64405 JOIN_ROOM -> room 561204: 'r3-p5' joined (5/50)
+00:00:36 127.0.0.1:64402 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64407 JOIN_ROOM -> room 038245: 'r2-p3' joined (1/50)
+00:00:36 127.0.0.1:64401 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64406 JOIN_ROOM -> room 038245: 'r2-p1' joined (2/50)
+00:00:36 127.0.0.1 UDP_HELLO from port 57578 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64403 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64408 JOIN_ROOM -> room 038245: 'r2-p4' joined (3/50)
+00:00:36 127.0.0.1:64404 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64395 START_QUIZ -> room 561204 host 'host-3': question 1 OPEN for 5 players
+00:00:36 127.0.0.1:64405 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64409 JOIN_ROOM -> room 038245: 'r2-p2' joined (4/50)
+00:00:36 127.0.0.1:64410 JOIN_ROOM -> room 038245: 'r2-p5' joined (5/50)
+00:00:36 127.0.0.1 UDP_HELLO from port 57700 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64407 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64406 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64408 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1:64409 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1 UDP_HELLO from port 62729 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 64611 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 56063 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 63657 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 65302 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 54239 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64394 START_QUIZ -> room 038245 host 'host-2': question 1 OPEN for 5 players
+00:00:36 127.0.0.1:64410 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:36 127.0.0.1 UDP_HELLO from port 64986 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 64973 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1 UDP_HELLO from port 59743 verified -> UDP_BOUND over TCP
+00:00:36 127.0.0.1:64407 SUBMIT_ANSWER -> room 038245 player 'r2-p3': accepted (7449 ms left)
+00:00:37 127.0.0.1:64400 SUBMIT_ANSWER -> room 113035 player 'r1-p5': accepted (6627 ms left)
+00:00:37 127.0.0.1:64409 SUBMIT_ANSWER -> room 038245 player 'r2-p2': accepted (6434 ms left)
+00:00:38 127.0.0.1:64410 SUBMIT_ANSWER -> room 038245 player 'r2-p5': accepted (6380 ms left)
+00:00:38 127.0.0.1:64402 SUBMIT_ANSWER -> room 561204 player 'r3-p2': accepted (6295 ms left)
+00:00:38 127.0.0.1:64404 SUBMIT_ANSWER -> room 561204 player 'r3-p4': accepted (6285 ms left)
+00:00:38 127.0.0.1:64401 SUBMIT_ANSWER -> room 561204 player 'r3-p1': accepted (5934 ms left)
+00:00:38 127.0.0.1:64406 SUBMIT_ANSWER -> room 038245 player 'r2-p1': accepted (5815 ms left)
+00:00:38 127.0.0.1:64396 SUBMIT_ANSWER -> room 113035 player 'r1-p2': accepted (5799 ms left)
+00:00:38 127.0.0.1:64399 SUBMIT_ANSWER -> room 113035 player 'r1-p4': accepted (5547 ms left)
+00:00:38 room 038245 question 1 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:38 127.0.0.1:64408 SUBMIT_ANSWER -> room 038245 player 'r2-p4': accepted (5412 ms left)
+00:00:39 127.0.0.1:64398 SUBMIT_ANSWER -> room 113035 player 'r1-p3': accepted (5288 ms left)
+00:00:39 room 113035 question 1 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:39 127.0.0.1:64397 SUBMIT_ANSWER -> room 113035 player 'r1-p1': accepted (5140 ms left)
+00:00:40 127.0.0.1:64403 SUBMIT_ANSWER -> room 561204 player 'r3-p3': accepted (4378 ms left)
+00:00:40 room 561204 question 1 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:40 127.0.0.1:64405 SUBMIT_ANSWER -> room 561204 player 'r3-p5': accepted (4267 ms left)
+00:00:41 127.0.0.1:64394 NEXT_QUESTION -> room 038245 host 'host-2': question 2 OPEN
+00:00:41 127.0.0.1:64393 NEXT_QUESTION -> room 113035 host 'host-1': question 2 OPEN
+00:00:41 127.0.0.1:64394 GET_STATE -> room 038245 host 'host-2': RESULT + STATE
+00:00:41 127.0.0.1:64409 GET_STATE -> room 038245 player 'r2-p2': RESULT + STATE
+00:00:41 127.0.0.1:64407 GET_STATE -> room 038245 player 'r2-p3': RESULT + STATE
+00:00:41 127.0.0.1:64406 GET_STATE -> room 038245 player 'r2-p1': RESULT + STATE
+00:00:41 127.0.0.1:64399 SUBMIT_ANSWER -> room 113035 player 'r1-p4': accepted (7699 ms left)
+00:00:41 127.0.0.1:64393 GET_STATE -> room 113035 host 'host-1': RESULT + STATE
+00:00:41 127.0.0.1:64396 GET_STATE -> room 113035 player 'r1-p2': RESULT + STATE
+00:00:41 127.0.0.1:64399 GET_STATE -> room 113035 player 'r1-p4': RESULT + STATE
+00:00:41 127.0.0.1:64397 GET_STATE -> room 113035 player 'r1-p1': RESULT + STATE
+00:00:41 127.0.0.1:64398 GET_STATE -> room 113035 player 'r1-p3': RESULT + STATE
+00:00:41 127.0.0.1:64410 SUBMIT_ANSWER -> room 038245 player 'r2-p5': accepted (7192 ms left)
+00:00:42 127.0.0.1:64398 SUBMIT_ANSWER -> room 113035 player 'r1-p3': accepted (7183 ms left)
+00:00:42 127.0.0.1:64395 NEXT_QUESTION -> room 561204 host 'host-3': question 2 OPEN
+00:00:42 127.0.0.1:64402 SUBMIT_ANSWER -> room 561204 player 'r3-p2': accepted (7780 ms left)
+00:00:42 127.0.0.1:64397 SUBMIT_ANSWER -> room 113035 player 'r1-p1': accepted (6824 ms left)
+00:00:42 127.0.0.1:64408 SUBMIT_ANSWER -> room 038245 player 'r2-p4': accepted (6510 ms left)
+00:00:42 127.0.0.1:64401 SUBMIT_ANSWER -> room 561204 player 'r3-p1': accepted (7608 ms left)
+00:00:42 127.0.0.1:64404 SUBMIT_ANSWER -> room 561204 player 'r3-p4': accepted (7532 ms left)
+00:00:42 127.0.0.1:64395 GET_STATE -> room 561204 host 'host-3': RESULT + STATE
+00:00:42 127.0.0.1:64401 GET_STATE -> room 561204 player 'r3-p1': RESULT + STATE
+00:00:42 127.0.0.1:64402 GET_STATE -> room 561204 player 'r3-p2': RESULT + STATE
+00:00:42 127.0.0.1:64404 GET_STATE -> room 561204 player 'r3-p4': RESULT + STATE
+00:00:42 127.0.0.1:64403 GET_STATE -> room 561204 player 'r3-p3': RESULT + STATE
+00:00:42 127.0.0.1:64407 SUBMIT_ANSWER -> room 038245 player 'r2-p3': accepted (6303 ms left)
+00:00:42 127.0.0.1:64405 SUBMIT_ANSWER -> room 561204 player 'r3-p5': accepted (7301 ms left)
+00:00:42 room 561204 question 2 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:42 127.0.0.1:64403 SUBMIT_ANSWER -> room 561204 player 'r3-p3': accepted (7196 ms left)
+00:00:43 127.0.0.1:64400 SUBMIT_ANSWER -> room 113035 player 'r1-p5': accepted (5968 ms left)
+00:00:43 room 113035 question 2 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:43 127.0.0.1:64396 SUBMIT_ANSWER -> room 113035 player 'r1-p2': accepted (5916 ms left)
+00:00:43 127.0.0.1:64406 SUBMIT_ANSWER -> room 038245 player 'r2-p1': accepted (5322 ms left)
+00:00:43 room 038245 question 2 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:43 127.0.0.1:64409 SUBMIT_ANSWER -> room 038245 player 'r2-p2': accepted (5266 ms left)
+00:00:44 127.0.0.1:64395 NEXT_QUESTION -> room 561204 host 'host-3': question 3 OPEN
+00:00:45 127.0.0.1:64393 NEXT_QUESTION -> room 113035 host 'host-1': question 3 OPEN
+00:00:45 127.0.0.1:64394 NEXT_QUESTION -> room 038245 host 'host-2': question 3 OPEN
+00:00:45 127.0.0.1:64399 SUBMIT_ANSWER -> room 113035 player 'r1-p4': accepted (9479 ms left)
+00:00:45 127.0.0.1:64404 SUBMIT_ANSWER -> room 561204 player 'r3-p4': accepted (9011 ms left)
+00:00:46 127.0.0.1:64400 SUBMIT_ANSWER -> room 113035 player 'r1-p5': accepted (9315 ms left)
+00:00:46 127.0.0.1:64408 GET_STATE -> room 038245 player 'r2-p4': RESULT + STATE
+00:00:46 127.0.0.1:64410 GET_STATE -> room 038245 player 'r2-p5': RESULT + STATE
+00:00:46 127.0.0.1:64397 SUBMIT_ANSWER -> room 113035 player 'r1-p1': accepted (9087 ms left)
+00:00:46 127.0.0.1:64401 SUBMIT_ANSWER -> room 561204 player 'r3-p1': accepted (8559 ms left)
+00:00:46 127.0.0.1:64408 SUBMIT_ANSWER -> room 038245 player 'r2-p4': accepted (9257 ms left)
+00:00:46 127.0.0.1:64403 SUBMIT_ANSWER -> room 561204 player 'r3-p3': accepted (8239 ms left)
+00:00:46 127.0.0.1:64405 SUBMIT_ANSWER -> room 561204 player 'r3-p5': accepted (8214 ms left)
+00:00:46 127.0.0.1:64406 GET_STATE -> room 038245 player 'r2-p1': RESULT + STATE
+00:00:46 127.0.0.1:64407 GET_STATE -> room 038245 player 'r2-p3': RESULT + STATE
+00:00:46 127.0.0.1:64394 GET_STATE -> room 038245 host 'host-2': RESULT + STATE
+00:00:46 127.0.0.1:64409 GET_STATE -> room 038245 player 'r2-p2': RESULT + STATE
+00:00:47 room 561204 question 3 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:47 127.0.0.1:64402 SUBMIT_ANSWER -> room 561204 player 'r3-p2': accepted (7722 ms left)
+00:00:47 127.0.0.1:64406 SUBMIT_ANSWER -> room 038245 player 'r2-p1': accepted (8410 ms left)
+00:00:47 127.0.0.1:64398 SUBMIT_ANSWER -> room 113035 player 'r1-p3': accepted (7484 ms left)
+00:00:49 127.0.0.1:64409 SUBMIT_ANSWER -> room 038245 player 'r2-p2': accepted (6701 ms left)
+00:00:49 room 113035 question 3 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:49 127.0.0.1:64396 SUBMIT_ANSWER -> room 113035 player 'r1-p2': accepted (6147 ms left)
+00:00:49 room 561204 finished; its host may create a new room
+00:00:49 127.0.0.1:64395 NEXT_QUESTION -> room 561204 host 'host-3': FINISHED (COMPLETED)
+00:00:49 127.0.0.1:64395 disconnected
+00:00:49 room 561204 host 'host-3' disconnected (identity kept)
+00:00:49 127.0.0.1:64401 disconnected
+00:00:49 127.0.0.1:64403 disconnected
+00:00:49 127.0.0.1:64405 disconnected
+00:00:49 127.0.0.1:64402 disconnected
+00:00:49 127.0.0.1:64404 disconnected
+00:00:49 room 561204 player 'r3-p1' disconnected (identity kept)
+00:00:49 room 561204 player 'r3-p3' disconnected (identity kept)
+00:00:49 room 561204 player 'r3-p5' disconnected (identity kept)
+00:00:49 room 561204 player 'r3-p2' disconnected (identity kept)
+00:00:49 room 561204 player 'r3-p4' disconnected (identity kept)
+00:00:49 127.0.0.1:64407 SUBMIT_ANSWER -> room 038245 player 'r2-p3': accepted (6463 ms left)
+00:00:49 room 038245 question 3 closed (ALL_ANSWERED), 5 answers -> RESULTS
+00:00:49 127.0.0.1:64410 SUBMIT_ANSWER -> room 038245 player 'r2-p5': accepted (6219 ms left)
+00:00:51 room 113035 finished; its host may create a new room
+00:00:51 127.0.0.1:64393 NEXT_QUESTION -> room 113035 host 'host-1': FINISHED (COMPLETED)
+00:00:51 127.0.0.1:64393 disconnected
+00:00:51 127.0.0.1:64397 disconnected
+00:00:51 room 113035 host 'host-1' disconnected (identity kept)
+00:00:51 127.0.0.1:64396 disconnected
+00:00:51 127.0.0.1:64398 disconnected
+00:00:51 127.0.0.1:64400 disconnected
+00:00:51 127.0.0.1:64399 disconnected
+00:00:51 room 113035 player 'r1-p1' disconnected (identity kept)
+00:00:51 room 113035 player 'r1-p2' disconnected (identity kept)
+00:00:51 room 113035 player 'r1-p3' disconnected (identity kept)
+00:00:51 room 113035 player 'r1-p5' disconnected (identity kept)
+00:00:51 room 113035 player 'r1-p4' disconnected (identity kept)
+00:00:51 room 038245 finished; its host may create a new room
+00:00:51 127.0.0.1:64394 NEXT_QUESTION -> room 038245 host 'host-2': FINISHED (COMPLETED)
+00:00:51 127.0.0.1:64394 disconnected
+00:00:51 room 038245 host 'host-2' disconnected (identity kept)
+00:00:51 127.0.0.1:64406 disconnected
+00:00:51 127.0.0.1:64407 disconnected
+00:00:51 127.0.0.1:64410 disconnected
+00:00:51 127.0.0.1:64409 disconnected
+00:00:51 127.0.0.1:64408 disconnected
+00:00:51 room 038245 player 'r2-p1' disconnected (identity kept)
+00:00:51 room 038245 player 'r2-p3' disconnected (identity kept)
+00:00:51 room 038245 player 'r2-p5' disconnected (identity kept)
+00:00:51 room 038245 player 'r2-p2' disconnected (identity kept)
+00:00:51 room 038245 player 'r2-p4' disconnected (identity kept)
+00:00:51 127.0.0.1:64414 connected
+00:00:51 127.0.0.1:64414 CREATE_ROOM -> 'host-1' created room 153243
+00:00:51 127.0.0.1:64414 PUT_QUIZ -> room 153243 host 'host-1': quiz loaded (3 questions)
+00:00:51 127.0.0.1:64414 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64415 connected
+00:00:51 127.0.0.1 UDP_HELLO from port 59067 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1:64416 connected
+00:00:51 127.0.0.1:64416 JOIN_ROOM -> room 153243: 'r1-p2' joined (1/50)
+00:00:51 127.0.0.1:64417 connected
+00:00:51 127.0.0.1:64415 JOIN_ROOM -> room 153243: 'r1-p1' joined (2/50)
+00:00:51 127.0.0.1:64418 connected
+00:00:51 127.0.0.1:64417 JOIN_ROOM -> room 153243: 'r1-p3' joined (3/50)
+00:00:51 127.0.0.1:64420 connected
+00:00:51 127.0.0.1:64422 connected
+00:00:51 127.0.0.1:64421 connected
+00:00:51 127.0.0.1:64419 connected
+00:00:51 127.0.0.1:64423 connected
+00:00:51 127.0.0.1:64418 JOIN_ROOM -> room 153243: 'r1-p4' joined (4/50)
+00:00:51 127.0.0.1:64427 connected
+00:00:51 127.0.0.1:64424 connected
+00:00:51 127.0.0.1:64428 connected
+00:00:51 127.0.0.1:64416 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64425 connected
+00:00:51 127.0.0.1:64430 connected
+00:00:51 127.0.0.1:64420 JOIN_ROOM -> room 153243: 'r1-p6' joined (5/50)
+00:00:51 127.0.0.1:64429 connected
+00:00:51 127.0.0.1:64431 connected
+00:00:51 127.0.0.1:64432 connected
+00:00:51 127.0.0.1:64433 connected
+00:00:51 127.0.0.1:64419 JOIN_ROOM -> room 153243: 'r1-p5' joined (6/50)
+00:00:51 127.0.0.1:64423 JOIN_ROOM -> room 153243: 'r1-p11' joined (7/50)
+00:00:51 127.0.0.1:64421 JOIN_ROOM -> room 153243: 'r1-p8' joined (8/50)
+00:00:51 127.0.0.1:64434 connected
+00:00:51 127.0.0.1:64417 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64436 connected
+00:00:51 127.0.0.1:64435 connected
+00:00:51 127.0.0.1:64437 connected
+00:00:51 127.0.0.1:64424 JOIN_ROOM -> room 153243: 'r1-p9' joined (9/50)
+00:00:51 127.0.0.1:64438 connected
+00:00:51 127.0.0.1:64428 JOIN_ROOM -> room 153243: 'r1-p13' joined (10/50)
+00:00:51 127.0.0.1:64439 connected
+00:00:51 127.0.0.1:64422 JOIN_ROOM -> room 153243: 'r1-p10' joined (11/50)
+00:00:51 127.0.0.1:64440 connected
+00:00:51 127.0.0.1:64441 connected
+00:00:51 127.0.0.1:64427 JOIN_ROOM -> room 153243: 'r1-p12' joined (12/50)
+00:00:51 127.0.0.1:64443 connected
+00:00:51 127.0.0.1:64425 JOIN_ROOM -> room 153243: 'r1-p7' joined (13/50)
+00:00:51 127.0.0.1:64442 connected
+00:00:51 127.0.0.1:64429 JOIN_ROOM -> room 153243: 'r1-p15' joined (14/50)
+00:00:51 127.0.0.1:64444 connected
+00:00:51 127.0.0.1:64445 connected
+00:00:51 127.0.0.1:64431 JOIN_ROOM -> room 153243: 'r1-p17' joined (15/50)
+00:00:51 127.0.0.1:64418 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64446 connected
+00:00:51 127.0.0.1:64447 connected
+00:00:51 127.0.0.1:64430 JOIN_ROOM -> room 153243: 'r1-p16' joined (16/50)
+00:00:51 127.0.0.1:64415 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64448 connected
+00:00:51 127.0.0.1:64432 JOIN_ROOM -> room 153243: 'r1-p14' joined (17/50)
+00:00:51 127.0.0.1:64449 connected
+00:00:51 127.0.0.1 UDP_HELLO from port 56697 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1:64450 connected
+00:00:51 127.0.0.1:64451 connected
+00:00:51 127.0.0.1:64452 connected
+00:00:51 127.0.0.1:64453 connected
+00:00:51 127.0.0.1:64433 JOIN_ROOM -> room 153243: 'r1-p18' joined (18/50)
+00:00:51 127.0.0.1:64420 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64434 JOIN_ROOM -> room 153243: 'r1-p20' joined (19/50)
+00:00:51 127.0.0.1:64419 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64454 connected
+00:00:51 127.0.0.1:64455 connected
+00:00:51 127.0.0.1:64436 JOIN_ROOM -> room 153243: 'r1-p21' joined (20/50)
+00:00:51 127.0.0.1:64456 connected
+00:00:51 127.0.0.1:64437 JOIN_ROOM -> room 153243: 'r1-p22' joined (21/50)
+00:00:51 127.0.0.1:64457 connected
+00:00:51 127.0.0.1:64421 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64458 connected
+00:00:51 127.0.0.1:64460 connected
+00:00:51 127.0.0.1:64459 connected
+00:00:51 127.0.0.1:64461 connected
+00:00:51 127.0.0.1:64438 JOIN_ROOM -> room 153243: 'r1-p23' joined (22/50)
+00:00:51 127.0.0.1:64462 connected
+00:00:51 127.0.0.1:64435 JOIN_ROOM -> room 153243: 'r1-p19' joined (23/50)
+00:00:51 127.0.0.1:64463 connected
+00:00:51 127.0.0.1:64439 JOIN_ROOM -> room 153243: 'r1-p24' joined (24/50)
+00:00:51 127.0.0.1:64464 connected
+00:00:51 127.0.0.1:64423 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64465 connected
+00:00:51 127.0.0.1:64440 JOIN_ROOM -> room 153243: 'r1-p26' joined (25/50)
+00:00:51 127.0.0.1:64424 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64441 JOIN_ROOM -> room 153243: 'r1-p27' joined (26/50)
+00:00:51 127.0.0.1:64442 JOIN_ROOM -> room 153243: 'r1-p25' joined (27/50)
+00:00:51 127.0.0.1:64443 JOIN_ROOM -> room 153243: 'r1-p28' joined (28/50)
+00:00:51 127.0.0.1:64444 JOIN_ROOM -> room 153243: 'r1-p30' joined (29/50)
+00:00:51 127.0.0.1:64428 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64445 JOIN_ROOM -> room 153243: 'r1-p31' joined (30/50)
+00:00:51 127.0.0.1:64447 JOIN_ROOM -> room 153243: 'r1-p33' joined (31/50)
+00:00:51 127.0.0.1:64446 JOIN_ROOM -> room 153243: 'r1-p29' joined (32/50)
+00:00:51 127.0.0.1:64422 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64425 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64427 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64448 JOIN_ROOM -> room 153243: 'r1-p34' joined (33/50)
+00:00:51 127.0.0.1:64450 JOIN_ROOM -> room 153243: 'r1-p36' joined (34/50)
+00:00:51 127.0.0.1 UDP_HELLO from port 53835 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1:64449 JOIN_ROOM -> room 153243: 'r1-p32' joined (35/50)
+00:00:51 127.0.0.1:64451 JOIN_ROOM -> room 153243: 'r1-p35' joined (36/50)
+00:00:51 127.0.0.1:64452 JOIN_ROOM -> room 153243: 'r1-p37' joined (37/50)
+00:00:51 127.0.0.1:64429 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64431 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64453 JOIN_ROOM -> room 153243: 'r1-p41' joined (38/50)
+00:00:51 127.0.0.1:64432 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64454 JOIN_ROOM -> room 153243: 'r1-p42' joined (39/50)
+00:00:51 127.0.0.1:64455 JOIN_ROOM -> room 153243: 'r1-p38' joined (40/50)
+00:00:51 127.0.0.1:64456 JOIN_ROOM -> room 153243: 'r1-p40' joined (41/50)
+00:00:51 127.0.0.1:64457 JOIN_ROOM -> room 153243: 'r1-p39' joined (42/50)
+00:00:51 127.0.0.1:64434 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64430 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64433 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64460 JOIN_ROOM -> room 153243: 'r1-p45' joined (43/50)
+00:00:51 127.0.0.1:64458 JOIN_ROOM -> room 153243: 'r1-p43' joined (44/50)
+00:00:51 127.0.0.1:64437 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64436 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64461 JOIN_ROOM -> room 153243: 'r1-p46' joined (45/50)
+00:00:51 127.0.0.1:64459 JOIN_ROOM -> room 153243: 'r1-p44' joined (46/50)
+00:00:51 127.0.0.1:64438 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64463 JOIN_ROOM -> room 153243: 'r1-p50' joined (47/50)
+00:00:51 127.0.0.1:64462 JOIN_ROOM -> room 153243: 'r1-p49' joined (48/50)
+00:00:51 127.0.0.1:64464 JOIN_ROOM -> room 153243: 'r1-p47' joined (49/50)
+00:00:51 127.0.0.1:64439 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64435 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64465 JOIN_ROOM -> room 153243: 'r1-p48' joined (50/50)
+00:00:51 127.0.0.1:64440 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64441 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64442 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64444 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64443 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64445 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64446 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1 UDP_HELLO from port 59748 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1:64447 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64450 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64448 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64451 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64449 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64452 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64453 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64454 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64455 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64456 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64457 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64458 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64460 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64461 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64463 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64459 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64462 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1:64464 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1 UDP_HELLO from port 59562 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 51457 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 49789 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 61056 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 61232 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 51986 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 61769 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 63461 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 58753 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 62264 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 49513 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 61667 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 49388 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 55301 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 54362 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 64903 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 54047 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 55255 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 49293 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 49225 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 52989 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 54940 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 61246 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 51032 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 61827 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 65228 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 58855 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1:64414 START_QUIZ -> room 153243 host 'host-1': question 1 OPEN for 50 players
+00:00:51 127.0.0.1:64465 REQUEST_UDP_BIND -> RESULT (binding + nonce)
+00:00:51 127.0.0.1 UDP_HELLO from port 58701 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 62703 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 58886 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 52813 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 51257 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 54401 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 50788 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 54457 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 58229 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 57758 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 49571 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 64235 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 58043 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 62293 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 53007 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 60739 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 56768 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 55373 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 55448 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1 UDP_HELLO from port 59602 verified -> UDP_BOUND over TCP
+00:00:51 127.0.0.1:64415 SUBMIT_ANSWER -> room 153243 player 'r1-p1': accepted (7763 ms left)
+00:00:52 127.0.0.1:64433 SUBMIT_ANSWER -> room 153243 player 'r1-p18': accepted (7633 ms left)
+00:00:52 127.0.0.1:64463 SUBMIT_ANSWER -> room 153243 player 'r1-p50': accepted (7497 ms left)
+00:00:52 127.0.0.1:64453 SUBMIT_ANSWER -> room 153243 player 'r1-p41': accepted (7491 ms left)
+00:00:52 127.0.0.1:64424 SUBMIT_ANSWER -> room 153243 player 'r1-p9': accepted (7463 ms left)
+00:00:52 127.0.0.1:64432 SUBMIT_ANSWER -> room 153243 player 'r1-p14': accepted (7405 ms left)
+00:00:52 127.0.0.1:64448 SUBMIT_ANSWER -> room 153243 player 'r1-p34': accepted (7255 ms left)
+00:00:52 127.0.0.1:64456 SUBMIT_ANSWER -> room 153243 player 'r1-p40': accepted (7206 ms left)
+00:00:52 127.0.0.1:64436 SUBMIT_ANSWER -> room 153243 player 'r1-p21': accepted (7093 ms left)
+00:00:52 127.0.0.1:64459 SUBMIT_ANSWER -> room 153243 player 'r1-p44': accepted (7086 ms left)
+00:00:52 127.0.0.1:64437 SUBMIT_ANSWER -> room 153243 player 'r1-p22': accepted (6883 ms left)
+00:00:52 127.0.0.1:64444 SUBMIT_ANSWER -> room 153243 player 'r1-p30': accepted (6869 ms left)
+00:00:52 127.0.0.1:64418 SUBMIT_ANSWER -> room 153243 player 'r1-p4': accepted (6852 ms left)
+00:00:52 127.0.0.1:64423 SUBMIT_ANSWER -> room 153243 player 'r1-p11': accepted (6821 ms left)
+00:00:52 127.0.0.1:64420 SUBMIT_ANSWER -> room 153243 player 'r1-p6': accepted (6805 ms left)
+00:00:53 127.0.0.1:64457 SUBMIT_ANSWER -> room 153243 player 'r1-p39': accepted (6732 ms left)
+00:00:53 127.0.0.1:64441 SUBMIT_ANSWER -> room 153243 player 'r1-p27': accepted (6620 ms left)
+00:00:53 127.0.0.1:64442 SUBMIT_ANSWER -> room 153243 player 'r1-p25': accepted (6551 ms left)
+00:00:53 127.0.0.1:64419 SUBMIT_ANSWER -> room 153243 player 'r1-p5': accepted (6460 ms left)
+00:00:53 127.0.0.1:64446 SUBMIT_ANSWER -> room 153243 player 'r1-p29': accepted (6321 ms left)
+00:00:53 127.0.0.1:64451 SUBMIT_ANSWER -> room 153243 player 'r1-p35': accepted (6157 ms left)
+00:00:53 127.0.0.1:64435 SUBMIT_ANSWER -> room 153243 player 'r1-p19': accepted (6138 ms left)
+00:00:53 127.0.0.1:64462 SUBMIT_ANSWER -> room 153243 player 'r1-p49': accepted (6127 ms left)
+00:00:53 127.0.0.1:64461 SUBMIT_ANSWER -> room 153243 player 'r1-p46': accepted (6063 ms left)
+00:00:53 127.0.0.1:64427 SUBMIT_ANSWER -> room 153243 player 'r1-p12': accepted (6024 ms left)
+00:00:53 127.0.0.1:64449 SUBMIT_ANSWER -> room 153243 player 'r1-p32': accepted (5990 ms left)
+00:00:53 127.0.0.1:64447 SUBMIT_ANSWER -> room 153243 player 'r1-p33': accepted (5902 ms left)
+00:00:54 127.0.0.1:64438 SUBMIT_ANSWER -> room 153243 player 'r1-p23': accepted (5608 ms left)
+00:00:54 127.0.0.1:64430 SUBMIT_ANSWER -> room 153243 player 'r1-p16': accepted (5416 ms left)
+00:00:54 127.0.0.1:64431 SUBMIT_ANSWER -> room 153243 player 'r1-p17': accepted (5371 ms left)
+00:00:54 127.0.0.1:64428 SUBMIT_ANSWER -> room 153243 player 'r1-p13': accepted (5155 ms left)
+00:00:54 127.0.0.1:64455 SUBMIT_ANSWER -> room 153243 player 'r1-p38': accepted (5141 ms left)
+00:00:54 127.0.0.1:64450 SUBMIT_ANSWER -> room 153243 player 'r1-p36': accepted (5133 ms left)
+00:00:54 127.0.0.1:64439 SUBMIT_ANSWER -> room 153243 player 'r1-p24': accepted (5124 ms left)
+00:00:54 127.0.0.1:64458 SUBMIT_ANSWER -> room 153243 player 'r1-p43': accepted (5004 ms left)
+00:00:54 127.0.0.1:64454 SUBMIT_ANSWER -> room 153243 player 'r1-p42': accepted (4971 ms left)
+00:00:54 127.0.0.1:64464 SUBMIT_ANSWER -> room 153243 player 'r1-p47': accepted (4947 ms left)
+00:00:54 127.0.0.1:64422 SUBMIT_ANSWER -> room 153243 player 'r1-p10': accepted (4923 ms left)
+00:00:54 127.0.0.1:64440 SUBMIT_ANSWER -> room 153243 player 'r1-p26': accepted (4868 ms left)
+00:00:54 127.0.0.1:64460 SUBMIT_ANSWER -> room 153243 player 'r1-p45': accepted (4858 ms left)
+00:00:54 127.0.0.1:64421 SUBMIT_ANSWER -> room 153243 player 'r1-p8': accepted (4785 ms left)
+00:00:55 127.0.0.1:64443 SUBMIT_ANSWER -> room 153243 player 'r1-p28': accepted (4589 ms left)
+00:00:55 127.0.0.1:64452 SUBMIT_ANSWER -> room 153243 player 'r1-p37': accepted (4540 ms left)
+00:00:55 127.0.0.1:64465 SUBMIT_ANSWER -> room 153243 player 'r1-p48': accepted (4521 ms left)
+00:00:55 127.0.0.1:64425 SUBMIT_ANSWER -> room 153243 player 'r1-p7': accepted (4422 ms left)
+00:00:55 127.0.0.1:64416 SUBMIT_ANSWER -> room 153243 player 'r1-p2': accepted (4408 ms left)
+00:00:55 127.0.0.1:64417 SUBMIT_ANSWER -> room 153243 player 'r1-p3': accepted (4376 ms left)
+00:00:55 127.0.0.1:64445 SUBMIT_ANSWER -> room 153243 player 'r1-p31': accepted (4362 ms left)
+00:00:55 127.0.0.1:64429 SUBMIT_ANSWER -> room 153243 player 'r1-p15': accepted (4220 ms left)
+00:00:55 room 153243 question 1 closed (ALL_ANSWERED), 50 answers -> RESULTS
+00:00:55 127.0.0.1:64434 SUBMIT_ANSWER -> room 153243 player 'r1-p20': accepted (4118 ms left)
+00:00:57 127.0.0.1:64414 NEXT_QUESTION -> room 153243 host 'host-1': question 2 OPEN
+00:00:57 127.0.0.1:64437 SUBMIT_ANSWER -> room 153243 player 'r1-p22': accepted (7676 ms left)
+00:00:58 127.0.0.1:64425 SUBMIT_ANSWER -> room 153243 player 'r1-p7': accepted (7639 ms left)
+00:00:58 127.0.0.1:64447 SUBMIT_ANSWER -> room 153243 player 'r1-p33': accepted (7573 ms left)
+00:00:58 127.0.0.1:64422 GET_STATE -> room 153243 player 'r1-p10': RESULT + STATE
+00:00:58 127.0.0.1:64435 GET_STATE -> room 153243 player 'r1-p19': RESULT + STATE
+00:00:58 127.0.0.1:64440 GET_STATE -> room 153243 player 'r1-p26': RESULT + STATE
+00:00:58 127.0.0.1:64451 GET_STATE -> room 153243 player 'r1-p35': RESULT + STATE
+00:00:58 127.0.0.1:64461 GET_STATE -> room 153243 player 'r1-p46': RESULT + STATE
+00:00:58 127.0.0.1:64434 GET_STATE -> room 153243 player 'r1-p20': RESULT + STATE
+00:00:58 127.0.0.1:64437 GET_STATE -> room 153243 player 'r1-p22': RESULT + STATE
+00:00:58 127.0.0.1:64456 GET_STATE -> room 153243 player 'r1-p40': RESULT + STATE
+00:00:58 127.0.0.1:64445 GET_STATE -> room 153243 player 'r1-p31': RESULT + STATE
+00:00:58 127.0.0.1:64430 GET_STATE -> room 153243 player 'r1-p16': RESULT + STATE
+00:00:58 127.0.0.1:64439 GET_STATE -> room 153243 player 'r1-p24': RESULT + STATE
+00:00:58 127.0.0.1:64453 GET_STATE -> room 153243 player 'r1-p41': RESULT + STATE
+00:00:58 127.0.0.1:64417 GET_STATE -> room 153243 player 'r1-p3': RESULT + STATE
+00:00:58 127.0.0.1:64457 GET_STATE -> room 153243 player 'r1-p39': RESULT + STATE
+00:00:58 127.0.0.1:64465 GET_STATE -> room 153243 player 'r1-p48': RESULT + STATE
+00:00:58 127.0.0.1:64442 SUBMIT_ANSWER -> room 153243 player 'r1-p25': accepted (7395 ms left)
+00:00:58 127.0.0.1:64435 SUBMIT_ANSWER -> room 153243 player 'r1-p19': accepted (7324 ms left)
+00:00:58 127.0.0.1:64455 SUBMIT_ANSWER -> room 153243 player 'r1-p38': accepted (7099 ms left)
+00:00:58 127.0.0.1:64422 SUBMIT_ANSWER -> room 153243 player 'r1-p10': accepted (7087 ms left)
+00:00:58 127.0.0.1:64463 SUBMIT_ANSWER -> room 153243 player 'r1-p50': accepted (6966 ms left)
+00:00:58 127.0.0.1:64439 SUBMIT_ANSWER -> room 153243 player 'r1-p24': accepted (6932 ms left)
+00:00:58 127.0.0.1:64432 SUBMIT_ANSWER -> room 153243 player 'r1-p14': accepted (6911 ms left)
+00:00:58 127.0.0.1:64443 SUBMIT_ANSWER -> room 153243 player 'r1-p28': accepted (6852 ms left)
+00:00:58 127.0.0.1:64430 SUBMIT_ANSWER -> room 153243 player 'r1-p16': accepted (6837 ms left)
+00:00:58 127.0.0.1:64458 SUBMIT_ANSWER -> room 153243 player 'r1-p43': accepted (6725 ms left)
+00:00:59 127.0.0.1:64429 SUBMIT_ANSWER -> room 153243 player 'r1-p15': accepted (6643 ms left)
+00:00:59 127.0.0.1:64428 SUBMIT_ANSWER -> room 153243 player 'r1-p13': accepted (6629 ms left)
+00:00:59 127.0.0.1:64423 SUBMIT_ANSWER -> room 153243 player 'r1-p11': accepted (6579 ms left)
+00:00:59 127.0.0.1:64448 SUBMIT_ANSWER -> room 153243 player 'r1-p34': accepted (6564 ms left)
+00:00:59 127.0.0.1:64461 SUBMIT_ANSWER -> room 153243 player 'r1-p46': accepted (6451 ms left)
+00:00:59 127.0.0.1:64416 SUBMIT_ANSWER -> room 153243 player 'r1-p2': accepted (6412 ms left)
+00:00:59 127.0.0.1:64415 SUBMIT_ANSWER -> room 153243 player 'r1-p1': accepted (6284 ms left)
+00:00:59 127.0.0.1:64450 SUBMIT_ANSWER -> room 153243 player 'r1-p36': accepted (6237 ms left)
+00:00:59 127.0.0.1:64438 SUBMIT_ANSWER -> room 153243 player 'r1-p23': accepted (6156 ms left)
+00:00:59 127.0.0.1:64456 SUBMIT_ANSWER -> room 153243 player 'r1-p40': accepted (6155 ms left)
+00:00:59 127.0.0.1:64418 SUBMIT_ANSWER -> room 153243 player 'r1-p4': accepted (6091 ms left)
+00:00:59 127.0.0.1:64433 SUBMIT_ANSWER -> room 153243 player 'r1-p18': accepted (5957 ms left)
+00:00:59 127.0.0.1:64464 SUBMIT_ANSWER -> room 153243 player 'r1-p47': accepted (5774 ms left)
+00:00:59 127.0.0.1:64462 SUBMIT_ANSWER -> room 153243 player 'r1-p49': accepted (5667 ms left)
+00:01:00 127.0.0.1:64440 SUBMIT_ANSWER -> room 153243 player 'r1-p26': accepted (5594 ms left)
+00:01:00 127.0.0.1:64460 SUBMIT_ANSWER -> room 153243 player 'r1-p45': accepted (5532 ms left)
+00:01:00 127.0.0.1:64420 SUBMIT_ANSWER -> room 153243 player 'r1-p6': accepted (5340 ms left)
+00:01:00 127.0.0.1:64424 SUBMIT_ANSWER -> room 153243 player 'r1-p9': accepted (5329 ms left)
+00:01:00 127.0.0.1:64431 SUBMIT_ANSWER -> room 153243 player 'r1-p17': accepted (5311 ms left)
+00:01:00 127.0.0.1:64452 SUBMIT_ANSWER -> room 153243 player 'r1-p37': accepted (5211 ms left)
+00:01:00 127.0.0.1:64454 SUBMIT_ANSWER -> room 153243 player 'r1-p42': accepted (5049 ms left)
+00:01:00 127.0.0.1:64427 SUBMIT_ANSWER -> room 153243 player 'r1-p12': accepted (5026 ms left)
+00:01:00 127.0.0.1:64451 SUBMIT_ANSWER -> room 153243 player 'r1-p35': accepted (4946 ms left)
+00:01:00 127.0.0.1:64419 SUBMIT_ANSWER -> room 153243 player 'r1-p5': accepted (4935 ms left)
+00:01:00 127.0.0.1:64457 SUBMIT_ANSWER -> room 153243 player 'r1-p39': accepted (4912 ms left)
+00:01:00 127.0.0.1:64459 SUBMIT_ANSWER -> room 153243 player 'r1-p44': accepted (4737 ms left)
+00:01:00 127.0.0.1:64444 SUBMIT_ANSWER -> room 153243 player 'r1-p30': accepted (4687 ms left)
+00:01:01 127.0.0.1:64445 SUBMIT_ANSWER -> room 153243 player 'r1-p31': accepted (4621 ms left)
+00:01:01 127.0.0.1:64465 SUBMIT_ANSWER -> room 153243 player 'r1-p48': accepted (4529 ms left)
+00:01:01 127.0.0.1:64417 SUBMIT_ANSWER -> room 153243 player 'r1-p3': accepted (4367 ms left)
+00:01:01 127.0.0.1:64434 SUBMIT_ANSWER -> room 153243 player 'r1-p20': accepted (4244 ms left)
+00:01:01 127.0.0.1:64453 SUBMIT_ANSWER -> room 153243 player 'r1-p41': accepted (4229 ms left)
+00:01:01 127.0.0.1:64436 SUBMIT_ANSWER -> room 153243 player 'r1-p21': accepted (4176 ms left)
+00:01:01 127.0.0.1:64446 SUBMIT_ANSWER -> room 153243 player 'r1-p29': accepted (4155 ms left)
+00:01:01 127.0.0.1:64441 SUBMIT_ANSWER -> room 153243 player 'r1-p27': accepted (4127 ms left)
+00:01:01 127.0.0.1:64449 SUBMIT_ANSWER -> room 153243 player 'r1-p32': accepted (4116 ms left)
+00:01:01 room 153243 question 2 closed (ALL_ANSWERED), 50 answers -> RESULTS
+00:01:01 127.0.0.1:64421 SUBMIT_ANSWER -> room 153243 player 'r1-p8': accepted (4093 ms left)
+00:01:03 127.0.0.1:64414 NEXT_QUESTION -> room 153243 host 'host-1': question 3 OPEN
+00:01:03 127.0.0.1:64461 SUBMIT_ANSWER -> room 153243 player 'r1-p46': accepted (9758 ms left)
+00:01:03 127.0.0.1:64451 SUBMIT_ANSWER -> room 153243 player 'r1-p35': accepted (9712 ms left)
+00:01:03 127.0.0.1:64418 SUBMIT_ANSWER -> room 153243 player 'r1-p4': accepted (9679 ms left)
+00:01:03 127.0.0.1:64444 SUBMIT_ANSWER -> room 153243 player 'r1-p30': accepted (9633 ms left)
+00:01:03 127.0.0.1:64424 SUBMIT_ANSWER -> room 153243 player 'r1-p9': accepted (9632 ms left)
+00:01:04 127.0.0.1:64453 SUBMIT_ANSWER -> room 153243 player 'r1-p41': accepted (9551 ms left)
+00:01:04 127.0.0.1:64443 SUBMIT_ANSWER -> room 153243 player 'r1-p28': accepted (9543 ms left)
+00:01:04 127.0.0.1:64418 GET_STATE -> room 153243 player 'r1-p4': RESULT + STATE
+00:01:04 127.0.0.1:64459 GET_STATE -> room 153243 player 'r1-p44': RESULT + STATE
+00:01:04 127.0.0.1:64445 GET_STATE -> room 153243 player 'r1-p31': RESULT + STATE
+00:01:04 127.0.0.1:64455 GET_STATE -> room 153243 player 'r1-p38': RESULT + STATE
+00:01:04 127.0.0.1:64464 GET_STATE -> room 153243 player 'r1-p47': RESULT + STATE
+00:01:04 127.0.0.1:64462 GET_STATE -> room 153243 player 'r1-p49': RESULT + STATE
+00:01:04 127.0.0.1:64453 GET_STATE -> room 153243 player 'r1-p41': RESULT + STATE
+00:01:04 127.0.0.1:64421 SUBMIT_ANSWER -> room 153243 player 'r1-p8': accepted (9466 ms left)
+00:01:04 127.0.0.1:64419 SUBMIT_ANSWER -> room 153243 player 'r1-p5': accepted (9210 ms left)
+00:01:04 127.0.0.1:64463 SUBMIT_ANSWER -> room 153243 player 'r1-p50': accepted (9117 ms left)
+00:01:04 127.0.0.1:64431 SUBMIT_ANSWER -> room 153243 player 'r1-p17': accepted (9077 ms left)
+00:01:04 127.0.0.1:64452 SUBMIT_ANSWER -> room 153243 player 'r1-p37': accepted (9027 ms left)
+00:01:04 127.0.0.1:64415 SUBMIT_ANSWER -> room 153243 player 'r1-p1': accepted (8937 ms left)
+00:01:04 127.0.0.1:64459 SUBMIT_ANSWER -> room 153243 player 'r1-p44': accepted (8867 ms left)
+00:01:04 127.0.0.1:64447 SUBMIT_ANSWER -> room 153243 player 'r1-p33': accepted (8795 ms left)
+00:01:04 127.0.0.1:64450 SUBMIT_ANSWER -> room 153243 player 'r1-p36': accepted (8745 ms left)
+00:01:04 127.0.0.1:64428 SUBMIT_ANSWER -> room 153243 player 'r1-p13': accepted (8653 ms left)
+00:01:05 127.0.0.1:64458 SUBMIT_ANSWER -> room 153243 player 'r1-p43': accepted (8557 ms left)
+00:01:05 127.0.0.1:64446 SUBMIT_ANSWER -> room 153243 player 'r1-p29': accepted (8520 ms left)
+00:01:05 127.0.0.1:64460 SUBMIT_ANSWER -> room 153243 player 'r1-p45': accepted (8461 ms left)
+00:01:05 127.0.0.1:64430 SUBMIT_ANSWER -> room 153243 player 'r1-p16': accepted (8440 ms left)
+00:01:05 127.0.0.1:64429 SUBMIT_ANSWER -> room 153243 player 'r1-p15': accepted (8411 ms left)
+00:01:05 127.0.0.1:64441 SUBMIT_ANSWER -> room 153243 player 'r1-p27': accepted (8344 ms left)
+00:01:05 127.0.0.1:64449 SUBMIT_ANSWER -> room 153243 player 'r1-p32': accepted (8252 ms left)
+00:01:05 127.0.0.1:64462 SUBMIT_ANSWER -> room 153243 player 'r1-p49': accepted (8018 ms left)
+00:01:05 127.0.0.1:64434 SUBMIT_ANSWER -> room 153243 player 'r1-p20': accepted (7916 ms left)
+00:01:05 127.0.0.1:64445 SUBMIT_ANSWER -> room 153243 player 'r1-p31': accepted (7906 ms left)
+00:01:05 127.0.0.1:64427 SUBMIT_ANSWER -> room 153243 player 'r1-p12': accepted (7696 ms left)
+00:01:05 127.0.0.1:64439 SUBMIT_ANSWER -> room 153243 player 'r1-p24': accepted (7612 ms left)
+00:01:06 127.0.0.1:64432 SUBMIT_ANSWER -> room 153243 player 'r1-p14': accepted (7446 ms left)
+00:01:06 127.0.0.1:64425 SUBMIT_ANSWER -> room 153243 player 'r1-p7': accepted (7396 ms left)
+00:01:06 127.0.0.1:64435 SUBMIT_ANSWER -> room 153243 player 'r1-p19': accepted (7343 ms left)
+00:01:06 127.0.0.1:64436 SUBMIT_ANSWER -> room 153243 player 'r1-p21': accepted (7341 ms left)
+00:01:06 127.0.0.1:64465 SUBMIT_ANSWER -> room 153243 player 'r1-p48': accepted (7233 ms left)
+00:01:06 127.0.0.1:64455 SUBMIT_ANSWER -> room 153243 player 'r1-p38': accepted (7193 ms left)
+00:01:06 127.0.0.1:64440 SUBMIT_ANSWER -> room 153243 player 'r1-p26': accepted (7089 ms left)
+00:01:06 127.0.0.1:64448 SUBMIT_ANSWER -> room 153243 player 'r1-p34': accepted (7089 ms left)
+00:01:06 127.0.0.1:64442 SUBMIT_ANSWER -> room 153243 player 'r1-p25': accepted (6988 ms left)
+00:01:06 127.0.0.1:64420 SUBMIT_ANSWER -> room 153243 player 'r1-p6': accepted (6945 ms left)
+00:01:06 127.0.0.1:64437 SUBMIT_ANSWER -> room 153243 player 'r1-p22': accepted (6796 ms left)
+00:01:06 127.0.0.1:64464 SUBMIT_ANSWER -> room 153243 player 'r1-p47': accepted (6677 ms left)
+00:01:06 127.0.0.1:64423 SUBMIT_ANSWER -> room 153243 player 'r1-p11': accepted (6640 ms left)
+00:01:06 127.0.0.1:64422 SUBMIT_ANSWER -> room 153243 player 'r1-p10': accepted (6619 ms left)
+00:01:07 127.0.0.1:64433 SUBMIT_ANSWER -> room 153243 player 'r1-p18': accepted (6556 ms left)
+00:01:07 127.0.0.1:64457 SUBMIT_ANSWER -> room 153243 player 'r1-p39': accepted (6453 ms left)
+00:01:07 127.0.0.1:64417 SUBMIT_ANSWER -> room 153243 player 'r1-p3': accepted (6300 ms left)
+00:01:07 127.0.0.1:64454 SUBMIT_ANSWER -> room 153243 player 'r1-p42': accepted (6162 ms left)
+00:01:07 127.0.0.1:64438 SUBMIT_ANSWER -> room 153243 player 'r1-p23': accepted (6148 ms left)
+00:01:07 127.0.0.1:64456 SUBMIT_ANSWER -> room 153243 player 'r1-p40': accepted (6078 ms left)
+00:01:07 room 153243 question 3 closed (ALL_ANSWERED), 50 answers -> RESULTS
+00:01:07 127.0.0.1:64416 SUBMIT_ANSWER -> room 153243 player 'r1-p2': accepted (6055 ms left)
+00:01:09 room 153243 finished; its host may create a new room
+00:01:09 127.0.0.1:64414 NEXT_QUESTION -> room 153243 host 'host-1': FINISHED (COMPLETED)
+00:01:09 127.0.0.1:64414 disconnected
+00:01:09 127.0.0.1:64415 disconnected
+00:01:09 127.0.0.1:64422 disconnected
+00:01:09 127.0.0.1:64418 disconnected
+00:01:09 127.0.0.1:64434 disconnected
+00:01:09 127.0.0.1:64438 disconnected
+00:01:09 127.0.0.1:64442 disconnected
+00:01:09 room 153243 player 'r1-p25' disconnected (identity kept)
+00:01:09 127.0.0.1:64445 disconnected
+00:01:09 127.0.0.1:64447 disconnected
+00:01:09 room 153243 player 'r1-p33' disconnected (identity kept)
+00:01:09 127.0.0.1:64452 disconnected
+00:01:09 127.0.0.1:64457 disconnected
+00:01:09 127.0.0.1:64456 disconnected
+00:01:09 room 153243 player 'r1-p40' disconnected (identity kept)
+00:01:09 127.0.0.1:64458 disconnected
+00:01:09 room 153243 player 'r1-p43' disconnected (identity kept)
+00:01:09 127.0.0.1:64465 disconnected
+00:01:09 room 153243 player 'r1-p48' disconnected (identity kept)
+00:01:09 127.0.0.1:64416 disconnected
+00:01:09 127.0.0.1:64424 disconnected
+00:01:09 room 153243 player 'r1-p9' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p1' disconnected (identity kept)
+00:01:09 127.0.0.1:64425 disconnected
+00:01:09 room 153243 player 'r1-p7' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p10' disconnected (identity kept)
+00:01:09 127.0.0.1:64432 disconnected
+00:01:09 127.0.0.1:64417 disconnected
+00:01:09 room 153243 player 'r1-p3' disconnected (identity kept)
+00:01:09 127.0.0.1:64419 disconnected
+00:01:09 room 153243 player 'r1-p5' disconnected (identity kept)
+00:01:09 127.0.0.1:64437 disconnected
+00:01:09 room 153243 player 'r1-p22' disconnected (identity kept)
+00:01:09 127.0.0.1:64440 disconnected
+00:01:09 127.0.0.1:64455 disconnected
+00:01:09 room 153243 player 'r1-p38' disconnected (identity kept)
+00:01:09 127.0.0.1:64427 disconnected
+00:01:09 room 153243 player 'r1-p12' disconnected (identity kept)
+00:01:09 127.0.0.1:64420 disconnected
+00:01:09 room 153243 player 'r1-p6' disconnected (identity kept)
+00:01:09 127.0.0.1:64429 disconnected
+00:01:09 room 153243 player 'r1-p15' disconnected (identity kept)
+00:01:09 127.0.0.1:64435 disconnected
+00:01:09 127.0.0.1:64443 disconnected
+00:01:09 room 153243 player 'r1-p28' disconnected (identity kept)
+00:01:09 127.0.0.1:64448 disconnected
+00:01:09 room 153243 player 'r1-p34' disconnected (identity kept)
+00:01:09 127.0.0.1:64451 disconnected
+00:01:09 room 153243 player 'r1-p35' disconnected (identity kept)
+00:01:09 127.0.0.1:64459 disconnected
+00:01:09 127.0.0.1:64462 disconnected
+00:01:09 room 153243 player 'r1-p49' disconnected (identity kept)
+00:01:09 127.0.0.1:64444 disconnected
+00:01:09 room 153243 player 'r1-p30' disconnected (identity kept)
+00:01:09 127.0.0.1:64436 disconnected
+00:01:09 room 153243 player 'r1-p23' disconnected (identity kept)
+00:01:09 127.0.0.1:64464 disconnected
+00:01:09 127.0.0.1:64446 disconnected
+00:01:09 room 153243 player 'r1-p29' disconnected (identity kept)
+00:01:09 127.0.0.1:64450 disconnected
+00:01:09 room 153243 player 'r1-p37' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p39' disconnected (identity kept)
+00:01:09 127.0.0.1:64454 disconnected
+00:01:09 127.0.0.1:64461 disconnected
+00:01:09 room 153243 player 'r1-p46' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p2' disconnected (identity kept)
+00:01:09 room 153243 host 'host-1' disconnected (identity kept)
+00:01:09 127.0.0.1:64428 disconnected
+00:01:09 room 153243 player 'r1-p13' disconnected (identity kept)
+00:01:09 127.0.0.1:64430 disconnected
+00:01:09 room 153243 player 'r1-p4' disconnected (identity kept)
+00:01:09 127.0.0.1:64439 disconnected
+00:01:09 room 153243 player 'r1-p26' disconnected (identity kept)
+00:01:09 127.0.0.1:64460 disconnected
+00:01:09 room 153243 player 'r1-p45' disconnected (identity kept)
+00:01:09 127.0.0.1:64431 disconnected
+00:01:09 127.0.0.1:64433 disconnected
+00:01:09 room 153243 player 'r1-p18' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p20' disconnected (identity kept)
+00:01:09 127.0.0.1:64441 disconnected
+00:01:09 127.0.0.1:64453 disconnected
+00:01:09 room 153243 player 'r1-p44' disconnected (identity kept)
+00:01:09 127.0.0.1:64421 disconnected
+00:01:09 room 153243 player 'r1-p8' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p21' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p47' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p31' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p36' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p42' disconnected (identity kept)
+00:01:09 127.0.0.1:64463 disconnected
+00:01:09 room 153243 player 'r1-p50' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p16' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p24' disconnected (identity kept)
+00:01:09 127.0.0.1:64423 disconnected
+00:01:09 room 153243 player 'r1-p17' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p19' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p27' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p41' disconnected (identity kept)
+00:01:09 127.0.0.1:64449 disconnected
+00:01:09 room 153243 player 'r1-p14' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p11' disconnected (identity kept)
+00:01:09 room 153243 player 'r1-p32' disconnected (identity kept)

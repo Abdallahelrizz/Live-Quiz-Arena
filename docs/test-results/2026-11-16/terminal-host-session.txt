@@ -1,0 +1,92 @@
+Fat-Rat host
+  Players (0): nobody yet
+  Room created.
+
+  >>> Room PIN: 620623   (players join 127.0.0.1 with this PIN) <<<
+
+  Commands: load <file>, start, pause, resume, close, next, players, kick <name>, end, quit
+  Quiz loaded: Quick Demo (3 questions)
+  Players (1): Abdallah
+  Players (2): Abdallah, bot-1
+  Players (3): Abdallah, bot-1, bot-2
+  Players (4): Abdallah, bot-1, bot-2, bot-3
+  Players (5): Abdallah, bot-1, bot-2, bot-3, bot-4
+
+  ----- Question 1 of 3 (8 s) -----
+  Which transport carries Fat-Rat answers?
+    1. Cheddar  -  TCP
+    2. Brie  -  UDP
+      8 s left   answered 0/5
+      7 s left   answered 0/5
+      6 s left   answered 2/5
+      5 s left   answered 3/5
+
+  ----- Results (everyone answered) -----
+  Correct answer: 1. Cheddar  -  TCP
+     1. Abdallah  935
+     2. bot-1  910
+     3. bot-3  776
+     4. bot-2  0
+     4. bot-4  0
+  Type 'next' for the next question.
+
+  ----- Question 2 of 3 (8 s) -----
+  Which transport carries the Fat-Rat countdown?
+      8 s left   answered 0/5
+    1. Cheddar  -  TCP
+    2. Brie  -  UDP
+    3. Gouda  -  HTTP
+      7 s left   answered 0/5
+      6 s left   answered 1/5
+      5 s left   answered 4/5
+
+  ----- Results (everyone answered) -----
+  Correct answer: 2. Brie  -  UDP
+     1. Abdallah  1808
+     2. bot-3  1695
+     3. bot-1  910
+     4. bot-4  819
+     5. bot-2  0
+  Type 'next' for the next question.
+  That is not possible right now: no question is open.
+  That is not possible right now: the quiz is not paused.
+  That is not possible right now: no question can be closed now.
+
+  ----- Question 3 of 3 (10 s) -----
+  What marks the end of a Fat-Rat message on TCP?
+    1. Cheddar  -  A newline
+    2. Brie  -  A 4-byte length before it
+    3. Gouda  -  Closing the connection
+    4. Swiss  -  Nothing
+    5. Feta  -  A zero byte
+    6. Mozzarella  -  A timeout
+    7. Parmesan  -  The word END
+    8. Blue  -  A UDP datagram
+      9 s left   answered 0/5
+      8 s left   answered 0/5
+      7 s left   answered 1/5
+      6 s left   answered 4/5
+      5 s left   answered 4/5
+      4 s left   answered 4/5
+
+  ----- Results (everyone answered) -----
+  Correct answer: 2. Brie  -  A 4-byte length before it
+     1. Abdallah  2458
+     2. bot-3  1695
+     3. bot-1  910
+     4. bot-4  819
+     5. bot-2  0
+  Type 'next' to finish and show the final ranking.
+    Abdallah  2458 points  (online)
+    bot-1  910 points  (online)
+    bot-2  0 points  (online)
+    bot-3  1695 points  (online)
+    bot-4  819 points  (online)
+
+  ===== The quiz is over. Final ranking =====
+     1. Abdallah  2458
+     2. bot-3  1695
+     3. bot-1  910
+     4. bot-4  819
+     5. bot-2  0
+  Closed. The room is kept; run the program again to return to it.

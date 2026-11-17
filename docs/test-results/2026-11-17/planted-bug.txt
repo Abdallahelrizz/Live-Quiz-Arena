@@ -1,0 +1,14 @@
+Planted bug check, 2026-11-17, one Mac (Claude Code).
+
+Purpose: show that the new concurrency test fails when the lock it relies on is removed.
+
+Test: tests/test_room.py RoomCreationAndJoinTests.test_simultaneous_creates_with_one_saved_identity_make_one_room
+  Eight threads send CREATE_ROOM for the same saved host identity at the same moment, 20 times.
+  Room construction is slowed by 2 ms inside the test to widen the race window.
+
+With the registry lock (normal code):         OK, exactly 1 room per host identity.
+With `with self.lock:` removed from
+Registry.create (planted bug):               FAILED  AssertionError: 8 != 1  (all eight threads created a room)
+After restoring the file (cmp identical):    OK
+
+The planted change was made to fatrat/server/registry.py and reverted; the file was compared with a saved copy.

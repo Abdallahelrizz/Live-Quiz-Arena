@@ -1,0 +1,23 @@
+{
+  "title": "Quick Demo",
+  "questions": [
+    {
+      "text": "Which transport carries Fat-Rat answers?",
+      "choices": ["TCP", "UDP"],
+      "correct": 0,
+      "time_seconds": 8
+    },
+    {
+      "text": "Which transport carries the Fat-Rat countdown?",
+      "choices": ["TCP", "UDP", "HTTP"],
+      "correct": 1,
+      "time_seconds": 8
+    },
+    {
+      "text": "What marks the end of a Fat-Rat message on TCP?",
+      "choices": ["A newline", "A 4-byte length before it", "Closing the connection", "Nothing", "A zero byte", "A timeout", "The word END", "A UDP datagram"],
+      "correct": 1,
+      "time_seconds": 10
+    }
+  ]
+}
